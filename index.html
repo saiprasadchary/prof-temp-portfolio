@@ -1,0 +1,2258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sina Golara | Professor Portfolio</title>
+  <meta name="description" content="The professional portfolio of Professor Sina Golara, showcasing research, teaching, and media engagement in Supply Chain and Operations Management.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sina Golara | Professor Portfolio" />
+  <meta property="og:description" content="Research, teaching, media & lab initiatives." />
+  <meta property="og:image" content="https://placehold.co/1200x630/003366/FFFFFF?text=Sina+Golara" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sina Golara | Professor Portfolio" />
+  <meta name="twitter:description" content="Research, teaching, media & lab initiatives." />
+  <meta name="twitter:image" content="https://placehold.co/1200x630/003366/FFFFFF?text=Sina+Golara" />
+
+  <!-- Canonical & robots (use GH Pages URL while testing; switch to sinagolara.com when live) -->
+<link rel="canonical" href="https://sinagolara.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+
+<!-- Open Graph extras -->
+<meta property="og:site_name" content="Sina Golara">
+<meta property="og:url" content="https://sinagolara.com/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter extras (optional: add the real handle if available) -->
+<meta name="twitter:site" content="@GolaraSina">
+<meta name="twitter:creator" content="@GolaraSina">
+
+<!-- Theme color (nice on mobile address bar) -->
+<meta name="theme-color" content="#003366">
+
+<link rel="me" href="https://www.linkedin.com/in/sinagolara/">
+
+<link rel="me" href="https://x.com/GolaraSina">
+
+<!-- Structured data: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sina Golara",
+  "url": "https://sinagolara.com/",
+  "jobTitle": "Assistant Professor of Supply Chain Management",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "Georgia State University – J. Mack Robinson College of Business",
+    "url": "https://robinson.gsu.edu/"
+  },
+  "sameAs": [
+    "https://robinson.gsu.edu/profile/sina-golara/",
+    "https://www.linkedin.com/in/sinagolara/",
+    "https://scholar.google.com/citations?user=<scholar-id>"
+  ]
+}
+</script>
+
+<!-- Structured data: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://sinagolara.com/",
+  "name": "Sina Golara | Professor Portfolio",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://sinagolara.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#003366',       // GSU blue
+            brandDark: '#002244',
+            gold: '#FFD233',        // accent
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(0,0,0,.08)',
+            glass: '0 20px 50px rgba(0,0,0,.12)',
+          },
+          backgroundImage: {
+            'aurora': 'radial-gradient(1200px 600px at -10% -10%, rgba(255,210,51,.18), transparent 40%), radial-gradient(800px 600px at 110% 0%, rgba(0,51,102,.18), transparent 45%), linear-gradient(120deg, #fff, #f7fafc 50%, #eef2f7)',
+            'aurora-dark': 'radial-gradient(1200px 600px at -10% -10%, rgba(255,210,51,.12), transparent 40%), radial-gradient(800px 600px at 110% 0%, rgba(0,51,102,.2), transparent 45%), linear-gradient(120deg, #0b1220, #0e1424 50%, #0b1220)',
+            'card-sheen': 'linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,.25))',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+  :root{
+    --ring: rgba(17,17,17,.08);
+  }
+  body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  h1,h2,h3,h4{font-family:Lora,Georgia,'Times New Roman',serif}
+
+  .skip-link{
+    position:fixed;left:-9999px;top:12px;background:#111;color:#fff;padding:.5rem .75rem;
+    border-radius:.5rem;z-index:9999
+  }
+  .skip-link:focus{left:12px}
+
+  /* gradient vars (tweak freely) */
+:root{
+  --grad-a:#0b1f3a;   /* deep brand blue */
+  --grad-b:#163a63;   /* mid tone */
+  --grad-c:#FFD233;   /* gold */
+}
+
+/* Make both News + Publications headers share the same look */
+.news-card .news-label,
+.pub-card  .pub-label{
+  background: linear-gradient(90deg,var(--grad-a),var(--grad-b) 55%,var(--grad-c));
+  color:#fff;
+  border-top-left-radius:14px;
+  border-top-right-radius:14px;
+  padding:1rem 1rem .5rem;
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-weight:800;
+  font-size:.85rem;
+  text-align:center;
+}
+
+/* Ensure the rounded band blends cleanly with the card */
+.news-card, .pub-card { overflow:hidden; }
+
+  /* Fancy underline for nav */
+  .nav-link{position:relative}
+  .nav-link::after{
+    content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);height:2px;width:0;
+    background:linear-gradient(90deg,var(--tw-gradient-from,#003366),var(--tw-gradient-to,#FFD233));
+    transition:width .25s ease
+  }
+  .nav-link:hover::after,.nav-link.active::after{width:100%}
+
+  /* Aspect ratio helper (no plugin) */
+  .video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px}
+  .video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease, transform .5s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none}
+    .nav-link::after{transition:none}
+  }
+
+  /* ---------- Optional generic stagger utility ---------- */
+  .stagger-grid { display:grid; gap:1.5rem; }
+  @media (min-width:768px){
+    .stagger-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .stagger-grid > * {
+      transition: transform .25s ease, background-color .25s ease, box-shadow .25s ease;
+      will-change: transform;
+    }
+  }
+
+  /* =====================================================
+     NEWS (grid + cards)
+     ===================================================== */
+  .news-grid{ display:grid; gap:1.25rem; }
+  @media (min-width:768px){
+    .news-grid{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      align-items:stretch;
+    }
+  }
+
+  .news-card{
+    --offset: 0px;               /* first row stays flush */
+    display:flex;
+    flex-direction:column;
+    transform: translateY(var(--offset));
+    transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+    will-change: transform;
+  }
+  @media (min-width:768px){
+  .pub-grid > .pub-card{ --offset:0px; }
+  .pub-grid > .pub-card:hover{ transform:translateY(-6px); } /* just a small lift on hover */
+}
+
+  .news-card .news-label{
+    min-height:24px;
+    padding:1rem 1rem .5rem;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-weight:700;
+    font-size:.85rem;
+    text-align:center;
+    color:rgba(255,255,255,.9);
+  }
+    .news-card .news-summary{
+    padding:.75rem 1.25rem 0;
+    color:rgba(255,255,255,.92);
+    line-height:1.75;
+    text-align:center;
+  }
+  .news-card .news-label{
+  background:linear-gradient(90deg,#003366,#FFD233);
+  border-top-left-radius:12px;border-top-right-radius:12px;
+}
+  
+
+  .news-card .news-media{ padding:0 1rem; }
+  .news-card img{
+    display:block;
+    width:100%;
+    margin:.5rem 0 0;
+    border-radius:12px;
+    aspect-ratio:16/9;          /* uniform visual height */
+    object-fit:cover;
+  }
+
+  .news-card .news-body{
+    padding:.75rem 1.25rem 0;
+    color:rgba(255,255,255,.92);
+    line-height:1.75;
+    text-align:center;
+  }
+
+  .news-card .news-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin:1rem auto 1.25rem;
+    padding:.75rem 1.25rem;
+    border-radius:.75rem;
+    background:#FFD233;
+    color:#0b1220;
+    font-weight:800;
+    letter-spacing:.12em;
+    font-size:.75rem;
+  }
+  .news-card .news-cta:hover{ filter:brightness(.95); }
+
+  /* =====================================================
+     PUBLICATIONS (same system & sizing as News)
+     ===================================================== */
+  .pub-grid{ display:grid; gap:1.25rem; }
+  @media (min-width:768px){
+    .pub-grid{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      align-items:stretch;
+    }
+  }
+
+  .pub-card{
+    --offset:0px;
+    display:flex;
+    flex-direction:column;
+    transform:translateY(var(--offset));
+    transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+    will-change:transform;
+    border:1px solid rgba(255,255,255,.10);
+    background:rgba(255,255,255,.05);
+    border-radius:16px;
+    backdrop-filter:saturate(120%) blur(6px);
+  }
+
+  .pub-card .pub-label{
+    padding:1rem 1rem .5rem;
+    text-transform:uppercase;
+    letter-spacing:.18em;
+    font-weight:700;
+    font-size:.85rem;
+    text-align:center;
+    color:rgba(255,255,255,.9);
+  }
+
+  .pub-card .pub-media{ padding:0 1rem; }
+  .pub-card img{
+    display:block;
+    width:100%;
+    margin:.5rem 0 0;
+    border-radius:12px;
+    aspect-ratio:16/9;           /* matches News; switch to 3/2 if your screenshots are taller */
+    object-fit:cover;
+  }
+
+  .pub-card .pub-body{
+    padding:.75rem 1.25rem 0;
+    text-align:center;
+  }
+  .pub-card .pub-title{
+    font-size:1.35rem;
+    line-height:1.3;
+    font-weight:800;
+    color:#fff;
+    margin:.35rem 0 0;
+  }
+  .pub-card .pub-meta{
+    color:rgba(255,255,255,.75);
+    font-size:.9rem;
+  }
+  .pub-card .pub-authors{
+    color:rgba(255,255,255,.85);
+    font-style:italic;
+    margin-top:.35rem;
+  }
+  .pub-card .pub-summary{
+    color:rgba(255,255,255,.92);
+    line-height:1.75;
+    margin-top:.65rem;
+  }
+
+  .pub-card .pub-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin:1rem auto 1.25rem;
+    padding:.75rem 1.25rem;
+    border-radius:.75rem;
+    background:#FFD233;
+    color:#0b1220;
+    font-weight:800;
+    letter-spacing:.12em;
+    font-size:.75rem;
+  }
+  .pub-card .pub-cta:hover{ filter:brightness(.95); }
+
+/* ===== Media meta bubble (light + dark notch) ===== */
+.meta-bubble{position:relative}
+.meta-bubble::after{
+  content:"";position:absolute;right:.9rem;bottom:-8px;width:0;height:0;
+  border:8px solid transparent;border-top-color:rgba(255,255,255,.9); /* matches bg */
+}
+.dark .meta-bubble::after{ border-top-color:rgba(2,6,23,.72) } /* ~slate-900/70 */
+  
+</style>
+
+
+
+</head>
+
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Scroll progress -->
+  <div id="progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand to-gold z-[60] w-0"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/60 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-700/60">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="h-16 flex items-center justify-between">
+        <a href="#home" class="flex items-center gap-3">
+          <span class="inline-grid place-items-center w-9 h-9 rounded-xl bg-brand text-white shadow-glow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="9"/></svg>
+          </span>
+          <span class="font-bold tracking-wide">DR. <span class="text-brand">SINA</span> GOLARA</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-5">
+          <a href="#home" class="nav-link text-sm font-semibold hover:text-brand">Home</a>
+          <a href="#research" class="nav-link text-sm font-semibold hover:text-brand">Research</a>
+          <a href="#teaching" class="nav-link text-sm font-semibold hover:text-brand">Teaching</a>
+          <a href="#media" class="nav-link text-sm font-semibold hover:text-brand">Media</a>
+          <a href="#lab" class="nav-link text-sm font-semibold hover:text-brand">Automotive Retail Lab</a>
+          <a href="#resources" class="nav-link text-sm font-semibold hover:text-brand">Resources</a>
+
+          <!-- Dark mode toggle -->
+          <button id="modeBtn" class="ml-2 rounded-lg border border-slate-200 dark:border-slate-700 px-2.5 py-1.5 text-xs font-semibold hover:bg-slate-50 dark:hover:bg-slate-800" aria-label="Toggle color theme">
+            <span id="modeIcon">🌙</span>
+          </button>
+        </div>
+
+        <button id="mobileBtn" class="md:hidden rounded-lg bg-brand text-white px-3 py-2 font-semibold">Menu</button>
+      </div>
+    </nav>
+
+    <!-- Mobile sheet -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+      <div class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl p-4 shadow-glow">
+        <nav class="grid gap-2 text-sm font-semibold">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#research" class="nav-link">Research</a>
+          <a href="#teaching" class="nav-link">Teaching</a>
+          <a href="#media" class="nav-link">Media</a>
+          <a href="#lab" class="nav-link">Automotive Retail Lab</a>
+          <a href="#resources" class="nav-link">Resources</a>
+          <button id="modeBtnM" class="mt-2 rounded-lg border border-slate-200 dark:border-slate-700 px-2.5 py-1.5 text-xs text-left">Toggle theme</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main" class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <!-- injected by router -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 bg-brand dark:bg-brandDark text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <div class="grid sm:grid-cols-3 gap-8">
+        <!-- Contact -->
+        <div>
+          <h3 class="font-semibold mb-3">Contact</h3>
+          <p class="text-sm text-white/80">
+            Assistant Professor of Supply Chain Management<br />
+            J. Mack Robinson College of Business<br />
+            Georgia State University
+          </p>
+          <p class="mt-3">
+            <a id="footer-email" class="font-medium hover:text-gold underline-offset-4 hover:underline" href="#"></a>
+          </p>
+          <p class="mt-1">
+            <a id="footer-gform" class="inline-flex items-center gap-1 text-sm font-semibold hover:text-gold underline-offset-4 hover:underline" href="#" target="_blank" rel="noreferrer">
+              Get in touch
+            </a>
+          </p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-semibold mb-3">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a class="text-white/80 hover:text-gold" href="#research">Research</a></li>
+            <li><a class="text-white/80 hover:text-gold" href="#teaching">Teaching</a></li>
+            <li><a class="text-white/80 hover:text-gold" href="#media">Media</a></li>
+            <li><a class="text-white/80 hover:text-gold" href="#lab">Automotive Retail Lab</a></li>
+            <li><a class="text-white/80 hover:text-gold" href="#resources">Resources</a></li>
+          </ul>
+        </div>
+  
+        <!-- Follow -->
+        <div>
+          <h3 class="font-semibold mb-3">Follow</h3>
+          <div class="flex gap-3">
+            <a id="li" class="w-10 h-10 grid place-items-center rounded-xl border border-white/20 hover:bg-white/10" target="_blank" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-white">
+                <path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v13H0zM8 8h4.6v1.9h.1c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.4 3 5.4 6.8V21h-5v-5.1c0-1.2-.02-2.9-1.8-2.9-1.8 0-2.1 1.3-2.1 2.8V21H8z"/>
+              </svg>
+            </a>
+            <a id="x" class="w-10 h-10 grid place-items-center rounded-xl border border-white/20 hover:bg-white/10" target="_blank" aria-label="X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-white">
+                <path d="M18.244 2H21l-6.5 7.43L22 22h-6.766l-4.7-6.14L4.8 22H2l7.07-8.08L2 2h6.85l4.3 5.77L18.244 2zM8.3 3.5H4.7l11.04 15h3.6L8.3 3.5z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mt-10 pt-6 border-t border-white/15 text-center text-sm text-white/80">
+        © <span id="year"></span> Dr. Sina Golara. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---------- DATA ----------
+    const professor = {
+      name: "Sina Golara",
+      title: "Assistant Professor of Supply Chain Management",
+      email: "sgolara@gsu.edu",
+      headshotUrl: "images/headshot.jpg",
+      shortBio: `
+        <p class="mb-4">Sina Golara is an Assistant Professor of Supply Chain Management at the J. Mack Robinson College of Business, Georgia State University. His research lies at the intersection of service and retail operations, with a focus on online platforms, omnichannel strategies, and the evolving role of digital technologies in supply chains. His work has appeared in leading journals such as Production and Operations Management, Information Systems Research, and the Journal of Purchasing and Supply Management.</p>
+        <p class="mb-4">Dr. Golara's research has been recognized with several awards, including the Best Student Paper Award from the Academy of Management's OSCM Division and an FT50 Publication Award from Kennesaw State University's Coles College of Business. He has also served as a finalist for the IBM Best Student Paper Award in the Service Science Division of INFORMS.</p>
+        <p class="mb-4">Prior to joining Georgia State University in 2023, Dr. Golara held academic appointments at Kennesaw State University and a postdoctoral position at the MIT Center for Transportation and Logistics. His industry and consulting experience includes work with Walmart Global eCommerce, Flexe, Inc., and Chemonics Connexi, where he advised on last-mile delivery, shared warehousing, and data analytics strategies.</p>
+        <p>Beyond academia, Dr. Golara frequently provides expert commentary on supply chain and trade issues in major outlets such as The New York Times, Politico, NPR, Fox 5 Atlanta, and the Atlanta Journal-Constitution, where his insights on tariffs, logistics disruptions, and industry transformations have reached broad audiences.</p>
+      `,
+      socials: {linkedinUrl: "https://www.linkedin.com/in/sinagolara/", xUrl: "https://x.com/GolaraSina" },
+      googleFormUrl: "#"
+    };
+
+/* ======== HOME VIDEOS ======== */
+    const homeVideos = [
+    { 
+        title: "The Warm Glow of Checkout Charity",
+        youtubeUrl: "https://www.youtube-nocookie.com/embed/WOYLe1mCzhM?start=16&rel=0&modestbranding=1&playsinline=1",
+        description: "Psychological impact of donate-at-checkout on consumer behavior & CSR."
+      },
+      { 
+        title: "Highlights from Open for Opportunity Atlanta",
+        youtubeUrl: "https://www.youtube-nocookie.com/embed/syOjrlSiArs?rel=0&modestbranding=1&playsinline=1",
+        description: "Future of supply chain & retail with industry leaders."
+      } 
+    ];
+
+    /* ===== LAB VIDEOS ===== */
+const labVideos = [
+  {
+    id: "reel",
+    title: "Automotive Retail Lab — Highlights Reel",
+    youtubeUrl: "https://www.youtube-nocookie.com/embed/0JhAq1E5ewM?rel=0&modestbranding=1&playsinline=1",
+    poster: "Images/lab-reel.jpg",
+    blurb: "Industry collaborations, EV traceability pilots, AI assistants for dealerships, omnichannel analytics."
+  },
+  {
+    id: "chatbot",
+    title: "AI Chatbot for Dealerships — Demo",
+    youtubeUrl: "https://www.youtube-nocookie.com/embed/WOYLe1mCzhM?start=16&rel=0&modestbranding=1&playsinline=1",
+    poster: "Images/lab-chatbot.jpg",
+    blurb: "Funnel deflection, appointment routing, and voice-of-customer insights."
+  },
+  {
+    id: "ev",
+    title: "EV Battery Traceability — Prototype Walkthrough",
+    youtubeUrl: "https://www.youtube-nocookie.com/embed/syOjrlSiArs?rel=0&modestbranding=1&playsinline=1",
+    poster: "Images/lab-ev.jpg",
+    blurb: "From sourcing → remanufacture → recycling with chain-of-custody."
+  }
+];
+
+/* ======== RESEARCH (verified & linked) ======== */
+const researchItems = [
+  {
+    id: "poms-2024-innovation",
+    title: "Service Activity and Patented Innovation in Manufacturing Firms",
+    authors: "Golara, S., & Dooley, K. J.",
+    venue: "Production and Operations Management",
+    year: 2024,
+    abstract: "Empirical link between service activity intensity and subsequent patented innovation in manufacturing <br> firms.",
+    image: "Images/poms-innovation.png",
+    tags: ["Servitization","Innovation","Manufacturing"],
+    links: {
+      publisherUrl: "https://journals.sagepub.com/doi/abs/10.1177/10591478241231851",   // journal-listed citation
+      openUrl: "https://scholar.google.com/scholar?q=%22Service+Activity+and+Patented+Innovation+in+Manufacturing+Firms%22+Golara+Dooley"
+    }
+  },
+  {
+    id: "poms-2024-inventory-variety",
+    title: "Impact of Inventory Levels and Product Variety on Consumers’ Perceptions of Brands",
+    authors: "Rajavi, K., Modaresi, S., & Golara, S.",
+    venue: "Production and Operations Management",
+    year: 2024,
+    abstract: "Shows how inventory availability and assortment breadth shift consumer brand perceptions using multi-category retail data.",
+    image: "Images/poms-inventory-variety.png",
+    tags: ["Retail","Assortment","Perception"],
+    links: {
+      publisherUrl: "https://journals.sagepub.com/doi/abs/10.1177/10591478241231851",
+      openUrl: "https://scholar.google.com/scholar?q=Rajavi+Modaresi+Golara+Impact+of+Inventory+Levels+and+Product+Variety"
+    }
+  },
+  {
+    id: "poms-2021-dealers",
+    title: "Are Dealers Still Relevant? How Dealer Service Quality Impacts Manufacturer Success",
+    authors: "Golara, S., Dooley, K. J., & Mousavi, N.",
+    venue: "Production and Operations Management",
+    year: 2021,
+    abstract: "Dealer service quality has a measurable downstream impact on manufacturer performance.",
+    image: "Images/poms-dealers.png",
+    tags: ["Automotive","Service Quality"],
+    links: {
+      publisherUrl: "https://doi.org/10.1111/poms.13450",
+      openUrl: "https://scholar.google.com/scholar?q=Are+Dealers+Still+Relevant%3F+How+Dealer+Service+Quality+Impacts+Manufacturer+Success"
+    }
+  },
+  {
+    id: "jpsm-2024-tariffs",
+    title: "Protect me not: The effect of tariffs on US supply networks",
+    authors: "Rogers, Z. S., Golara, S., Abdulsalam, Y., & Rogers, D. S.",
+    venue: "Journal of Purchasing and Supply Management",
+    year: 2024,
+    abstract: "Quantifies how tariff shape supply networks and firm",
+    image: "Images/jpsm-tariffs.png",
+    tags: ["Tariffs","Supply Networks","Policy"],
+    links: {
+      // Publisher page is behind ScienceDirect’s wall; this Scholar query works universally.
+      publisherUrl: "https://www.sciencedirect.com/science/article/abs/pii/S1478409223000468",
+      openUrl: "https://scholar.google.com/scholar?q=Rogers+Golara+Abdulsalam+Rogers+Protect+me+not"
+    }
+  },
+  {
+    id: "jpsm-2023-sustainability-value",
+    title: "Moving Beyond the Four Walls: The evolving impact of supplier sustainability on firm value",
+    authors: "Rogers, Z. S., Carter, C. R., & Golara, S.",
+    venue: "Journal of Purchasing and Supply Management",
+    year: 2023,
+    abstract: "Documents how supplier sustainability increasingly drives firm value.",
+    image: "Images/jpsm-sustainability.png",
+    tags: ["Sustainability","Firm Value","Supply Chain"],
+    links: {
+      publisherUrl: "https://www.sciencedirect.com/science/article/abs/pii/S1478409223000468", // cites the JPSM article & DOI 100858
+      openUrl: "https://www.sciencedirect.com/science/article/abs/pii/S1478409223000468"
+    }
+  },
+  {
+    id: "isr-2025-achievement-goals",
+    title: "The Impact of Situational Achievement Goals on Online Learning Behavior",
+    authors: "Mousavi, N., Golara, S., & Bockstedt, J.",
+    venue: "Information Systems <br> Research",
+    year: 2025,
+    abstract: "Field-experiment evidence showing how dynamically activated goals shape content engagement and <br> completion.",
+    image: "Images/isr-achievement-goals.png",
+    tags: ["Online Learning","Behavior","Field Experiments"],
+    links: {
+      publisherUrl: "https://pubsonline.informs.org/doi/abs/10.1287/isre.2022.0353",
+      openUrl: "https://scholar.google.com/scholar?q=%22Impact+of+Situational+Achievement+Goals+on+Online+Learning+Behavior%22+Information+Systems+Research"
+    }
+  },
+  {
+    id: "tj-2024-scm-topics",
+    title: "Supply chain management research productivity and topics: 2020–2022",
+    authors: "Maloni, M. J., Franza, R. M., Lowman, G. H., Naphsin, S. A., & Golara, S.",
+    venue: "Transportation <br> Journal",
+    year: 2024,
+    abstract: "Snapshot of SCM research outputs and themes for 2020–2022.",
+    image: "Images/tj-scm-2020-2022.png",
+    tags: ["Bibliometrics","SCM"],
+    links: {
+      publisherUrl: "https://onlinelibrary.wiley.com/doi/abs/10.1002/tjo3.12010",
+      openUrl: "https://scholar.google.com/scholar?q=Maloni+Franza+Lowman+Naphsin+Golara+Transportation+Journal+2024"
+    }
+  },
+  {
+    id: "tj-2021-scm-growth",
+    title: "Supply chain management research productivity and growth: 2017–2019",
+    authors: "Maloni, M. J., Golara, S., & Lowman, <br> G. H.",
+    venue: "Transportation <br> Journal",
+    year: 2021,
+    abstract: "Descriptive analysis of SCM research productivity and growth during 2017–2019.",
+    image: "Images/tj-scm-2017-2019.png",
+    tags: ["Bibliometrics","SCM"],
+    links: {
+      publisherUrl: "https://scholarlypublishingcollective.org/psup/transportation-journal/article-abstract/60/2/208/276791/Supply-Chain-Management-Research-Productivity-and",
+      openUrl: "https://scholar.google.com/scholar?q=Maloni+Golara+Lowman+Transportation+Journal+2021"
+    }
+  },
+  {
+    id: "tj-2020-sharing-portfolio",
+    title: "A Sharing-Enabled Portfolio Approach to the <br> Distribution",
+    authors: "Rogers, Z. S., Golara, S., Abdulsalam, Y. J., & Rogers, D. S.",
+    venue: "Transportation <br> Journal",
+    year: 2020,
+    abstract: "Portfolio approach showing how sharing capacity improves distribution performance.",
+    image: "Images/tj-sharing-portfolio.png",
+    tags: ["Distribution","Sharing","Logistics"],
+    links: {
+      publisherUrl: "https://scholarlypublishingcollective.org/psup/transportation-journal/article-abstract/59/2/99/211263/A-Sharing-Enabled-Portfolio-Approach-to",
+      openUrl: "https://scholar.google.com/scholar?q=Rogers+Golara+Abdulsalam+Rogers+Transportation+Journal+2020"
+    }
+  },
+  {
+    id: "ijme-2022-teaching-osc",
+    title: "It’s not you, it’s me: Can others learn from the challenges of teaching operations and supply chain management?",
+    authors: "Swaim, J. A., Maloni, M., Golara, S., & Veliyath, R.",
+    venue: "International Journal of Management Education",
+    year: 2022,
+    abstract: "From Challenges to Insights in Ops/SCM Teaching.",
+    image: "Images/ijme-teaching.png",
+    tags: ["Education","OSC"],
+    links: {
+      publisherUrl: "https://scholar.google.com/scholar?q=International+Journal+of+Management+Education+100656+Swaim+Maloni+Golara",
+      openUrl: "https://scholar.google.com/scholar?q=%22It%E2%80%99s+not+you,+it%E2%80%99s+me%22+Golara"
+    }
+  },
+  {
+    id: "ijpe-2018-corp-env",
+    title: "Corporate environmental investments: A cross-national study on managerial decision making",
+    authors: "Azadegan, A., Golara, S., Kach, A., & Mousavi, N.",
+    venue: "International Journal of Production Economics",
+    year: 2018,
+    abstract: "Cross-national study on how managers decide to invest in corporate environmental initiatives.",
+    image: "Images/ijpe-corporate-env.png",
+    tags: ["Sustainability","Decision Making"],
+    links: {
+      publisherUrl: "https://www.sciencedirect.com/science/article/abs/pii/S0925527317302943",
+      openUrl: "https://scholar.google.com/scholar?q=Azadegan+Golara+Kach+Mousavi+International+Journal+of+Production+Economics+2018"
+    }
+  },
+  {
+    id: "ijids-2013-fuzzy-qfd-bsc",
+    title: "A fuzzy-QFD approach to balanced scorecard using an analytic network <br> process",
+    authors: "Tavana, M., Mousavi, N., & <br> Golara, S.",
+    venue: "International Journal of Information and Decision Sciences",
+    year: 2013,
+    abstract: "Combines fuzzy-QFD and ANP frameworks to design a comprehensive balanced scorecard.",
+    image: "Images/ijids-fuzzy-qfd.png",
+    tags: ["Methodology","QFD","ANP"],
+    links: {
+      publisherUrl: "https://www.inderscienceonline.com/doi/abs/10.1504/IJIDS.2013.058289",
+      openUrl: "https://scholar.google.com/scholar?q=Tavana+Mousavi+Golara+International+Journal+of+Information+and+Decision+Sciences+2013"
+    }
+  },
+  {
+    id: "ijsds-2012-glass-closed-loop",
+    title: "Closed-loop supply chain network design with <br> recovery of glass <br> containers",
+    authors: "Golara, S., Mousavi, N., Tarokh, M. J., & Hosseinzadeh, M.",
+    venue: "International Journal of Strategic Decision Sciences",
+    year: 2012,
+    abstract: "Closed-loop sustainable network design model considering glass container recovery.",
+    image: "Images/ijsds-closed-loop.png",
+    tags: ["Closed-Loop SCM","Optimization"],
+    links: {
+      publisherUrl: "https://www.igi-global.com/article/content/74353",
+      openUrl: "https://scholar.google.com/scholar?q=Golara+Mousavi+Tarokh+Hosseinzadeh+IJSDS+2012"
+    }
+  }
+];
+
+const mediaItems = [
+  {
+    id: 1,
+    title: "‘A Lot of Chaos’: Bridge Collapse Creates Upheaval at Largest U.S. Port for Car Trade",
+    outlet: "The New York Times",
+    date: "2024-03-26",
+    type: "Article",
+    url: "https://www.nytimes.com/2024/03/26/business/economy/baltimore-port-cargo-ships.html",
+    excerpt: "Auto imports/exports rerouted after Key Bridge collapse; broader supply-chain effects.",
+    image: "Images/NYTImg.png"
+  },
+  {
+    id: 2,
+    title: "Auto industry braces for weeks of disruption after bridge collapse",
+    outlet: "Politico",
+    date: "2024-03-26",
+    type: "Article",
+    url: "https://www.politico.com/news/2024/03/26/auto-industry-disruption-bridge-collapse-00149185",
+    excerpt: "Golara on dealer inventory and logistics workarounds post-collapse.",
+    image: "Images/PoliticoImg.png"
+  },
+  {
+    id: 3,
+    title: "Vehicle cargo could be heading to Georgia ports following the collapse of Baltimore’s bridge",
+    outlet: "NPR (WABE)",
+    date: "2024-03-27",
+    type: "Article",
+    url: "https://www.wabe.org/vehicle-cargo-could-be-heading-to-georgia-ports-following-the-collapse-of-baltimores-bridge/",
+    excerpt: "How diversions may affect Georgia’s auto flows and port capacity.",
+    image: "Images/NPR.png"
+  },
+  {
+    id: 4,
+    title: "The Take | Fed rate cut: What’s next? (9/19/25)",
+    outlet: "11Alive (NBC Atlanta)",
+    date: "2025-09-19",
+    type: "Video",
+    url: "https://www.11alive.com/video/news/politics/the-take/the-take-fed-rate-cut-whats-next-91925/85-5d28e4fa-8a46-4d75-a4f2-349d9af3fdfd",
+    excerpt: "Golara breaks down what a rate cut means for consumers and jobs.",
+    image: "Images/11AliveImge.png"
+  },
+  {
+    id: 5,
+    title: "Shifting tariffs thrust Georgia companies onto unsteady ground",
+    outlet: "Atlanta Journal-Constitution",
+    date: "2024-05-15",
+    type: "Article",
+    url: "https://news.gsu.edu/2024/10/15/are-tariffs-good-or-bad-for-the-economy/",
+    excerpt: "Tariff ripple effects across Georgia firms; expert perspective from Golara.",
+    image: "Images/AJC.png"
+  },
+  {
+    id: 6,
+    title: "Farmers prepare for potential fallout from Trump’s Wednesday tariffs",
+    outlet: "Scripps News",
+    date: "2025-04-01",
+    type: "Video",
+    url: "https://scrippsnews.com/stories/farmers-prepare-for-potential-fallout-from-trumps-wednesday-tariffs/",
+    excerpt: "Possible retaliation risks and supply-chain impacts for U.S. agriculture.",
+    image: "Images/Farmers.png"
+  }
+];
+const teaching = {
+  courses: [
+    // Georgia State University (Instructor | Aug 2023 – )
+    { institution: "Georgia State University", code: "MGT 4700", title: "Operations Management", level: "Undergrad", years: "2023–present" },
+    { institution: "Georgia State University", code: "MGT 4740", title: "Operations Strategy",     level: "Undergrad", years: "2023–present" },
+    { institution: "Georgia State University", code: "MGT 8740", title: "Supply Chain Strategy",  level: "Graduate", years: "2023–present" },
+
+    // Kennesaw State University (Instructor | Aug 2019 – Aug 2023)
+    { institution: "Kennesaw State University", code: "MGT 3200", title: "Operations Management",     level: "Undergrad", years: "2019–2023" },
+    { institution: "Kennesaw State University", code: "MGT 7040", title: "Managing the Value Chain",  level: "Graduate", years: "2019–2023" },
+
+    // MIT CTL / MITx (2018–2019)
+    { institution: "MIT CTL / MITx", code: "SC1x", title: "Supply Chain Fundamentals (Teaching team)", level: "Graduate", years: "2018–2019" },
+    { institution: "MIT CTL / MITx", code: "SC2x", title: "Supply Chain Design (Teaching team)",      level: "Graduate", years: "2018–2019" },
+
+    // Arizona State University (Instructor/TA | 2017–2018)
+    { institution: "Arizona State University", code: "SCM 432", title: "Planning & Control Systems for SCM", level: "Undergrad", years: "2017–2018" },
+    { institution: "Arizona State University", code: "SCM 300", title: "Intro to Supply Chain Management (TA)", level: "Undergrad", years: "2017–2018" },
+  ],
+  advising: [
+    // MIT CTL capstones (Research Advisor / Co-advisor)
+    { institution: "MIT CTL", years: "2018–2019", role: "Co-advisor",  title: "Incentivizing No-Rush Delivery in Omnichannel Retail", type: "Graduate Capstone" },
+    { institution: "MIT CTL", years: "2018–2019", role: "Advisor/Trainer", title: "Online Grocery & Omnichannel Strategy: Predicting Home Delivery Adoption", type: "Graduate Capstone" },
+  ],
+  note: "At MIT CTL, trained students on empirical research methods."
+};
+
+    const events = [
+      { id: 1, title: "Keynote on Digital Retail", organization: "National Retail Federation", date: "2023-06-10", location: "New York, NY", url: "#", summary: "Future of brick-and-mortar in a digital world." },
+      { id: 2, title: "Workshop on Supply Chain Analytics", organization: "INFORMS Conference", date: "2022-11-05", location: "Virtual", url: "#", summary: "Hands-on analytics for academics & practitioners." },
+      { id: 3, title: "Panel: The Future of Mobility", organization: "Automotive World Congress", date: "2023-02-20", location: "Detroit, MI", url: "#", summary: "EVs, autonomy, and ownership models." },
+    ];
+
+    const resources = [
+  // ——— Datasets & Dashboards ———
+  {
+    id: 101,
+    title: "FRED — Federal Reserve Economic Data",
+    type: "Dataset",
+    description: "Macro indicators (rates, employment, prices) for context in retail & supply chain analyses.",
+    url: "https://fred.stlouisfed.org/"
+  },
+  {
+    id: 102,
+    title: "U.S. Census — Monthly Retail Trade (MRTS)",
+    type: "Dataset",
+    description: "Sales by retail subsector; handy for omnichannel & inventory availability work.",
+    url: "https://www.census.gov/retail/index.html"
+  },
+  {
+    id: 103,
+    title: "Bureau of Transportation Statistics (BTS)",
+    type: "Dataset",
+    description: "Freight flows, port performance, and transportation services indices.",
+    url: "https://www.bts.gov/"
+  },
+  {
+    id: 104,
+    title: "Georgia Ports Authority",
+    type: "Dashboard",
+    description: "Operational updates & trade volumes relevant to Southeast auto flows (Ro/Ro).",
+    url: "https://gaports.com/"
+  },
+  {
+    id: 105,
+    title: "Freightos Baltic Index (FBX)",
+    type: "Dashboard",
+    description: "Container spot rates—useful for shocks, tariffs, and logistics cost dynamics.",
+    url: "https://fbx.freightos.com/"
+  },
+  {
+    id: 106,
+    title: "Cass Freight Index",
+    type: "Dashboard",
+    description: "U.S. shipment & expenditure benchmarks (demand signal for freight/retail).",
+    url: "https://www.cassinfo.com/transportation-indexes"
+  },
+  {
+    id: 107,
+    title: "BLS Producer Price Index (PPI)",
+    type: "Dataset",
+    description: "Input price pressures across manufacturing & distribution.",
+    url: "https://www.bls.gov/ppi/"
+  },
+  {
+    id: 108,
+    title: "EIA — Gasoline & Diesel Prices",
+    type: "Dataset",
+    description: "Fuel price trackers—key for delivery, dealer logistics, and last-mile costs.",
+    url: "https://www.eia.gov/petroleum/gasdiesel/"
+  },
+
+  // ——— Industry & Policy ———
+  {
+    id: 201,
+    title: "USITC — Harmonized Tariff Schedule (HTS)",
+    type: "Policy",
+    description: "Authoritative tariff classifications and changes—baseline for trade impact work.",
+    url: "https://hts.usitc.gov/"
+  },
+  {
+    id: 202,
+    title: "Office of the U.S. Trade Representative (USTR)",
+    type: "Policy",
+    description: "Tariff actions, Section 301 reviews, and trade policy updates.",
+    url: "https://ustr.gov/"
+  },
+  {
+    id: 203,
+    title: "WTO — Statistics Database",
+    type: "Policy",
+    description: "Global trade, tariff, and services data for cross-country comparisons.",
+    url: "https://stats.wto.org/"
+  },
+  {
+    id: 204,
+    title: "Cox Automotive — Industry Insights",
+    type: "Industry",
+    description: "Auto retail trends, Manheim used-vehicle value signals, and dealer analytics.",
+    url: "https://www.coxautoinc.com/insights/"
+  },
+  {
+    id: 205,
+    title: "J.D. Power — Auto Market Intelligence",
+    type: "Industry",
+    description: "Demand signals, inventory health, and consumer behavior in automotive.",
+    url: "https://www.jdpower.com/business"
+  },
+  {
+    id: 206,
+    title: "NADA — Auto Retail Data",
+    type: "Industry",
+    description: "Dealership counts, employment, and financial benchmarking for U.S. auto retail.",
+    url: "https://www.nada.org/"
+  },
+
+  // ——— Journals (FT-50 and field) ———
+  {
+    id: 301,
+    title: "Information Systems Research (ISR)",
+    type: "Journal",
+    description: "IS & digital platforms—aligned with online learning and platform research.",
+    url: "https://pubsonline.informs.org/journal/isre"
+  },
+  {
+    id: 302,
+    title: "Production and Operations Management (POM)",
+    type: "Journal",
+    description: "Core outlet for operations, retail, and service management research.",
+    url: "https://onlinelibrary.wiley.com/journal/19375956"
+  },
+  {
+    id: 303,
+    title: "Management Science",
+    type: "Journal",
+    description: "Broad management science with strong empirical & analytical work.",
+    url: "https://pubsonline.informs.org/journal/mnsc"
+  },
+  {
+    id: 304,
+    title: "Manufacturing & Service Operations Management (M&SOM)",
+    type: "Journal",
+    description: "MS/OM methods, queueing, assortment, and service ops—tight fit with lab themes.",
+    url: "https://pubsonline.informs.org/journal/msom"
+  },
+  {
+    id: 305,
+    title: "Journal of Operations Management (JOM)",
+    type: "Journal",
+    description: "Empirical OM with strategy and organizational angles.",
+    url: "https://www.sciencedirect.com/journal/journal-of-operations-management"
+  },
+  {
+    id: 306,
+    title: "Journal of Purchasing & Supply Management (JPSM)",
+    type: "Journal",
+    description: "Purchasing, supplier sustainability, and network structure (matches Golara’s work).",
+    url: "https://www.sciencedirect.com/journal/journal-of-purchasing-and-supply-management"
+  },
+
+  // ——— Teaching & Methods ———
+  {
+    id: 401,
+    title: "MIT CTL — MicroMasters in Supply Chain (SCx)",
+    type: "Course",
+    description: "SC1x/SC2x foundations—ties to Golara’s MIT CTL teaching contributions.",
+    url: "https://micromasters.mit.edu/scm/"
+  },
+  {
+    id: 402,
+    title: "MIT Center for Transportation & Logistics (CTL)",
+    type: "Center",
+    description: "Research, case studies, and supply chain teaching materials.",
+    url: "https://ctl.mit.edu/"
+  },
+  {
+    id: 403,
+    title: "Causal Inference: The Mixtape (Cunningham)",
+    type: "Book",
+    description: "Modern, practical causal inference with code—great for field experiments & diff-in-diff.",
+    url: "https://mixtape.scunning.com/"
+  },
+  {
+    id: 404,
+    title: "The Goal (Goldratt) — Theory of Constraints",
+    type: "Book",
+    description: "Classic operations narrative on bottlenecks, flow, and throughput.",
+    url: "https://en.wikipedia.org/wiki/The_Goal_(novel)"
+  },
+
+  // ——— Tools (used in courses & lab workflows) ———
+  {
+    id: 501,
+    title: "Tableau",
+    type: "Tool",
+    description: "Rapid dashboards for executive storytelling and class projects.",
+    url: "https://www.tableau.com/"
+  },
+  {
+    id: 502,
+    title: "Microsoft Power BI",
+    type: "Tool",
+    description: "Enterprise-friendly BI for supply-chain analytics & lab demos.",
+    url: "https://powerbi.microsoft.com/"
+  }
+];
+
+    const labProjects = [
+      { id: 1, title: "EV Battery Supply Chain Traceability", abstract: "Blockchain-based traceability for EV batteries from sourcing to recycling.", collaborators: ["Student A","Industry Partner X"], status: "In Progress", tags: ["EVs","Blockchain"] },
+      { id: 2, title: "AI Chatbot for Dealerships", abstract: "AI assistant for inquiries & scheduling in dealerships.", collaborators: ["Student B","Student C"], status: "Completed", tags: ["AI","Automotive"] },
+      { id: 3, title: "‘Buy Online’ & Foot Traffic", abstract: "Effect of online purchasing on dealership visits.", collaborators: ["Student D"], status: "Published", tags: ["Retail","Analytics"] },
+    ];
+
+    const labPartners = [
+      { name: "Major Auto Group", logoUrl: "https://placehold.co/150x60/CCCCCC/FFFFFF?text=Auto+Group", websiteUrl: "#" },
+      { name: "RetailTech Solutions", logoUrl: "https://placehold.co/150x60/CCCCCC/FFFFFF?text=RetailTech", websiteUrl: "#" },
+      { name: "Logistics Inc.", logoUrl: "https://placehold.co/150x60/CCCCCC/FFFFFF?text=Logistics+Inc", websiteUrl: "#" },
+      { name: "Data Analytics Corp", logoUrl: "https://placehold.co/150x60/CCCCCC/FFFFFF?text=Data+Corp", websiteUrl: "#" },
+    ];
+
+      // ---------- HIGHLIGHTS DATA ----------
+      const newsHighlights = [
+  {
+    outlet: "The New York Times",
+    date: "Mar 26, 2024",
+    title:
+      "‘A Lot of Chaos’: Bridge Collapse Creates Upheaval at Largest U.S. Port for Car Trade",
+    url: "#", // paste final link
+    image: "Images/NYTImg.png",
+    summary:
+      "Dr. Golara explains how the Key Bridge collapse ripples through the auto import/export flow, stressing inland rail and storage capacity."
+  },
+  {
+    outlet: "Politico",
+    date: "Mar 26, 2024",
+    title:
+      "Auto industry braces for ‘weeks <br> of disruption’ after the bridge <br> collapse",
+    url: "https://www.politico.com/news/2024/03/26/auto-industry-disruption-bridge-collapse-00149185",
+    image: "Images/PoliticoImg.png",
+    summary:
+      "Context on near-term dealership inventory, finished-vehicle routing, and the scramble for alternative port capacity."
+  },
+  {
+    outlet: "Bloomberg",
+    date: "Apr 13, 2025",
+    title: "Tariff Turbulence Has CFOs Staring Down a Recession",
+    url: "https://www.bloomberg.com/news/newsletters/2025-04-13/levi-s-levi-carnival-ccl-elevate-bio-stare-down-a-recession?embedded-checkout=true",
+    image: "Images/BloombergImg.png",
+    summary:
+      "Brief feature highlighting Golara’s view on demand signals and retail operations amid macro uncertainty."
+  },
+  
+
+  {
+    outlet: "Al Jazeera",
+    date: "1 month ago", // replace with exact date if you prefer
+    title: "US car sales slow after tariff-driven buying surge ends",
+    url: "#", // ← paste live link
+    image: "Images/Aljazeer.png",
+    summary:
+      "Major car makers including Ford, GM and Volvo took hits because of tariff-associated costs."
+  },
+  {
+    outlet: "Scripps News (#Farmers)",
+    date: "Apr 1, 2025",
+    title:
+      "Farmers prepare for potential fallout from Trump's Wednesday tariffs",
+    url: "#", // ← paste live link
+    image: "Images/Farmers.png",
+    summary:
+      "U.S. farmers could be targets of retaliatory tariffs as the administration readies reciprocal tariffs."
+  },
+  {
+    outlet: "11Alive (NBC Atlanta)",
+    date: "Sep 19, 2025",
+    title:
+      "11Alive News: The Take | Fed rate cut: What’s next? (9/19/25)",
+    url: "#", // ← paste live link
+    image: "Images/11AliveImge.png",
+    summary:
+      "GSU's Sina Golara explains what the Fed’s first rate cut in nearly a year means for jobs, inflation, and consumers."
+  }
+  // add more items as needed, keeping outlet/date/title/url/image/summary
+];
+
+const pubHighlights = [
+  {
+    journal: " Information Systems Research <br> (Forthcoming)",
+    date: "2025",
+    title: "The Impact of Situational Achievement Goals on Online Learning Behavior",
+    authors: "Mousavi, N., Bockstedt, J., Golara, S.",
+    summary:
+      "Using a large-scale online-learning panel, we analyze how dynamically-activated achievement goals shape content engagement and completion.",
+    url: "https://pubsonline.informs.org/doi/abs/10.1287/isre.2022.0353", // DOI or PDF
+    image: "Images/achievement-goal.png",
+    cta: "VIEW PAPER"
+  },
+  {
+    journal: "Production and Operations Management (Forthcoming)",
+    date: "2025",
+    title: "Impact of Inventory Levels and Product Variety on Consumers’ Perceptions of Brands",
+    authors: "Rajavi, K., Modaresi, S., Golara, S.",
+    summary:
+      "With multi-category retail data we show how inventory availability and assortment breadth shift consumer brand perceptions.",
+    url: "https://journals.sagepub.com/doi/abs/10.1177/10591478241258475",
+    image: "Images/poms_impactInventoryHome.png",
+    cta: "VIEW PAPER"
+  },
+  
+  {
+    journal: "Production and Operations Management • 2024",
+    title: "Service Activity and Patented <br> Innovation in Manufacturing <br> Firms",
+    authors: "Dooley, K. J., & Golara, S.",
+    url: "https://journals.sagepub.com/doi/abs/10.1177/10591478241231851",  // add DOI/PDF when ready
+    image: "Images/poms-innovation.png",
+    summary: "Empirical study of how growth in service activity relates to patented innovation output across manufacturing firms."
+  },
+  {
+    journal: "Production and Operations Management • 2021",
+    title: "Are Dealers Still Relevant? How Dealer Service Quality Impacts Manufacturer Success",
+    authors: "Dooley, K. J., Mousavi, N., & Golara, S.",
+    url: "https://journals.sagepub.com/doi/abs/10.1111/poms.13450",  // add DOI/PDF when ready
+    image: "Images/poms-dealers_Home.png",
+    summary: "Evidence on the role of dealer service quality and its downstream impact on manufacturer outcomes."
+  }
+
+];
+
+const videoHighlights = [
+  {
+    title: "AI and Supply Chain with Sina Golara and Connor Makowski (MIT CTL)",
+    youtubeUrl:
+      "https://www.youtube-nocookie.com/embed/0JhAq1E5ewM?rel=0&modestbranding=1&playsinline=1",
+    // if you prefer a static card with a screenshot instead of an <iframe>,
+    // add `image: "assets/highlights/mit-video.png"` and render like the news cards.
+  },
+];
+
+    // ---------- TEMPLATES ----------
+    const homePage = `
+      <section class="rounded-3xl p-6 md:p-10 bg-aurora dark:bg-aurora-dark shadow-glass relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-gold/20 blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 w-[420px] h-[420px] rounded-full bg-brand/20 blur-3xl"></div>
+
+        <div class="grid md:grid-cols-2 gap-10 items-center relative z-10">
+          <div class="reveal">
+            <span class="inline-flex items-center gap-2 text-xs font-semibold px-2.5 py-1 rounded-full bg-gold/20 text-brand border border-gold/40">THE FRANCHISING PROFESSOR</span>
+            <h1 class="mt-3 text-4xl md:text-5xl font-bold leading-tight">Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-gold">Dr. Sina Golara’s</span> Website</h1>
+            <p class="mt-3 text-lg text-slate-700 dark:text-slate-300">Supply Chain and Operations Management Research & Teaching</p>
+
+            <div class="mt-7 flex flex-wrap items-center gap-4">
+              <a href="#research" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-brand text-white font-semibold shadow-glow hover:bg-brandDark">Explore Research
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              </a>
+              <a href="https://robinson.gsu.edu/profile/sina-golara/" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-600 font-semibold hover:bg-white/60 dark:hover:bg-slate-800/60">Academic Profile</a>
+            </div>
+           
+          </div>
+
+          <div class="reveal">
+            <div class="relative rounded-3xl shadow-glow overflow-hidden border border-slate-200 dark:border-slate-700">
+              <img
+                src="Images/hero-supply-chain.png"  
+                alt="Modern supply chain network with logistics, robotics and data visualization"
+                class="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
+              />
+              <div class="absolute bottom-4 left-4 bg-black/55 text-white text-sm px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                Innovation in Supply Chain Management
+              </div>
+              </div>
+              </div>
+          </div>
+      </section>
+
+     <section class="mt-14 reveal rounded-3xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl shadow-glow overflow-hidden">
+  <div class="grid md:[grid-template-columns:440px_1fr] lg:[grid-template-columns:540px_1fr]">
+    <!-- Left: Headshot fills the card height on md+; stacks on mobile -->
+    <figure class="relative max-md:aspect-[4/5] md:h-full">
+      <img
+        src="${professor.headshotUrl}"
+        alt="Headshot of ${professor.name}"
+        class="w-full h-full object-cover object-top"
+      />
+      <figcaption class="absolute bottom-3 left-3 text-[11px] md:text-xs bg-black/55 text-white px-2 py-1 rounded-lg">
+        Headshot — ${professor.name}
+      </figcaption>
+    </figure>
+
+    <!-- Right: Bio content -->
+    <div class="p-6 md:p-8 flex flex-col">
+      <h2 class="text-2xl md:text-3xl font-bold text-brand">About Sina</h2>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">GSU • J. Mack Robinson College of Business</p>
+
+      <!-- Two-column flowing text on large screens -->
+      <div class="mt-4 lg:columns-2 lg:gap-10 leading-relaxed grow">
+        ${professor.shortBio}
+      </div>
+
+      <!-- CTA pinned toward the bottom for a tidy edge -->
+      <div class="mt-6">
+        <a
+          href="https://robinson.gsu.edu/profile/sina-golara/"
+          target="_blank"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-gold to-amber-300 text-slate-900 font-semibold shadow-glow hover:opacity-95"
+        >
+          GSU Academic Profile
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+       <section class="mt-16 relative overflow-hidden rounded-3xl text-white p-8 md:p-10 shadow-glow bg-gradient-to-br from-[#0b1f3a] via-[#163a63] to-[#0d6d7e]">
+  <!-- soft accents + subtle mesh, same as before -->
+  <div class="pointer-events-none absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-[#FFD233]/25 blur-3xl"></div>
+  <div class="pointer-events-none absolute -bottom-28 -right-16 w-[34rem] h-[34rem] rounded-full bg-cyan-300/20 blur-3xl"></div>
+  <div class="pointer-events-none absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_1px)] [background-size:20px_20px]"></div>
+
+ <div class="relative z-10 space-y-10">
+  <h2 class="text-3xl font-bold text-center">Highlights</h2>
+
+  <!-- Publications (card grid, aligned + diagonal) -->
+  <div>
+    <h3 class="text-xl font-semibold mb-4">Publications</h3>
+    <div class="pub-grid">
+      ${pubHighlights.map(p => `
+        <article class="pub-card">
+          <div class="pub-label">${p.journal ?? ""}</div>
+          <div class="pub-media">
+            <img src="${p.image}" alt="${p.journal ?? 'Journal'} — ${p.title}">
+          </div>
+          <div class="pub-body">
+            ${p.date ? `<div class="pub-meta">${p.date}</div>` : ``}
+            <h4 class="pub-title">${p.title}</h4>
+            ${p.authors ? `<div class="pub-authors">${p.authors}</div>` : ``}
+            ${p.summary ? `<p class="pub-summary">${p.summary}</p>` : ``}
+          </div>
+          <a class="pub-cta" href="${p.url}" target="_blank" rel="noreferrer">
+            ${p.cta ?? "VIEW PAPER"}
+          </a>
+        </article>
+      `).join('')}
+    </div>
+  </div>
+
+  <!-- News -->
+  <div>
+    <h3 class="text-xl font-semibold mb-4">News</h3>
+    <div class="news-grid">
+      ${newsHighlights.map(n => `
+        <div class="news-card">
+          <div class="news-label">${n.outlet}</div>
+          <img src="${n.image}" alt="${n.outlet} — ${n.title}" loading="lazy">
+          <div class="p-5 pt-3">
+            <div class="text-white/70 text-xs text-center">${n.date}</div>
+            <h4 class="mt-1 text-2xl font-semibold leading-snug text-center">
+              ${n.title}
+            </h4>
+            <p class="news-summary">${n.summary}</p>
+            <div class="text-center">
+              <a class="news-cta" href="${n.url}" target="_blank" rel="noreferrer">READ ARTICLE</a>
+            </div>
+          </div>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+
+  <!-- Featured Video -->
+  <div>
+    <h3 class="text-xl font-semibold mb-4">Featured Video</h3>
+    <div class="video-wrap shadow-glow">
+      <iframe
+        src="${videoHighlights[0].youtubeUrl}"
+        title="${videoHighlights[0].title}"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <p class="mt-2 text-white/80 text-sm">${videoHighlights[0].title}</p>
+  </div>
+</div></section>
+
+      <section class="mt-16 rounded-3xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-8 shadow-glow text-center">
+        <h2 class="text-3xl font-bold">Get in Touch</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-400">Connect on social or send a quick note.</p>
+        <div class="mt-6 flex justify-center gap-4">
+          
+          <a href="${professor.socials.linkedinUrl}" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="w-11 h-11 grid place-items-center rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v13H0zM8 8h4.6v1.9h.1c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.4 3 5.4 6.8V21h-5v-5.1c0-1.2-.02-2.9-1.8-2.9-1.8 0-2.1 1.3-2.1 2.8V21H8z"/></svg>
+          </a>
+          <a href="${professor.socials.xUrl}" target="_blank" rel="noreferrer" aria-label="X" class="w-11 h-11 grid place-items-center rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.5 7.43L22 22h-6.766l-4.7-6.14L4.8 22H2l7.07-8.08L2 2h6.85l4.3 5.77L18.244 2zM8.3 3.5H4.7l11.04 15h3.6L8.3 3.5z"/></svg>
+          </a>
+        </div>
+        <button id="contactBtn" class="inline-flex mt-6 items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold to-amber-300 text-slate-900 font-semibold shadow-glow">Contact Form</button>       </section>
+    `;
+
+    const researchPage = `
+  <h1 class="text-4xl md:text-5xl font-bold text-center">Research</h1>
+
+  <section class="mt-10 grid md:grid-cols-3 gap-6 reveal">
+    <div class="rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <h2 class="text-2xl font-bold text-brand">Motivation</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-400">Understanding and improving the intersection of technology, strategy, and consumer experience.</p>
+    </div>
+    <div class="rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <h2 class="text-2xl font-bold text-brand">Relevance</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-400">Actionable insights for retail, automotive, and supply chain sectors in transformation.</p>
+    </div>
+    <div class="rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <h2 class="text-2xl font-bold text-brand">Philosophy</h2>
+      <p class="mt-2 text-slate-600 dark:text-slate-400">Empirically-grounded, theory-relevant, industry-impactful research.</p>
+    </div>
+  </section>
+
+  <section class="mt-10">
+    <!-- Filters -->
+    <div class="flex flex-wrap gap-4 items-center justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+  <label class="font-semibold">Tag:</label>
+  <select id="tag-filter" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></select>
+
+  <label class="font-semibold">Sort:</label>
+  <select id="sort-by" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+    <option value="year_desc">Year (Newest)</option>
+    <option value="year_asc">Year (Oldest)</option>
+  </select>
+
+  <label class="font-semibold md:ml-2">View:</label>
+  <select id="view-density" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+    <option value="comfy" selected>Comfortable</option>
+    <option value="compact">Compact</option>
+  </select>
+</div>
+
+    <!-- FT-50 section -->
+    <section class="mt-8 rounded-3xl p-6 md:p-7 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <h2 class="text-xl md:text-2xl font-bold text-brand">FT-50 Journals:</h2>
+      <div id="ft50-grid" class="mt-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-7"></div>
+    </section>
+
+    <!-- Others section -->
+    <section class="mt-6 rounded-3xl p-6 md:p-7 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <h2 class="text-xl md:text-2xl font-bold text-brand">Others:</h2>
+      <div id="other-grid" class="mt-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-7"></div>
+    </section>
+  </section>
+`;
+
+const teachingPage = `
+  <h1 class="text-4xl md:text-5xl font-bold text-center">Teaching & Mentorship</h1>
+  <p class="mt-2 text-center text-slate-600 dark:text-slate-400">
+    Courses taught across GSU, KSU, MIT CTL/MITx, and ASU; plus advising on graduate capstones.
+  </p>
+
+  <!-- Filters -->
+  <section class="mt-8 flex flex-wrap gap-3 justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+    <label class="font-semibold">Institution:</label>
+    <select id="teach-inst" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></select>
+
+    <label class="font-semibold">Level:</label>
+    <select id="teach-level" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+      <option value="all" selected>All</option>
+      <option value="Undergrad">Undergrad</option>
+      <option value="Graduate">Graduate</option>
+    </select>
+  </section>
+
+  <!-- Courses -->
+  <section class="mt-8 rounded-3xl p-6 md:p-7 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+    <div class="flex items-center justify-between gap-4">
+      <h2 class="text-xl md:text-2xl font-bold text-brand">Courses</h2>
+      <span id="teach-count" class="text-sm text-slate-500 dark:text-slate-400"></span>
+    </div>
+    <div id="teach-grid" class="mt-6 grid md:grid-cols-2 gap-6"></div>
+  </section>
+
+  <!-- Advising -->
+  <section class="mt-8 rounded-3xl p-6 md:p-7 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+    <h2 class="text-xl md:text-2xl font-bold text-brand">Advising & Mentorship</h2>
+    <ul id="advising-list" class="mt-4 space-y-3"></ul>
+    <p class="mt-4 text-sm text-slate-600 dark:text-slate-400">
+      ${teaching.note}
+    </p>
+  </section>
+`;
+
+    const mediaPage = `
+      <h1 class="text-4xl md:text-5xl font-bold text-center">Media</h1>
+      <p class="mt-3 text-center text-slate-600 dark:text-slate-400">Articles, interviews, and features.</p>
+
+      <div class="mt-8 flex flex-wrap gap-4 justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+        <label class="font-semibold">Type:</label>
+        <select id="media-type-filter" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+          <option value="all">All</option><option>Article</option><option>Interview</option><option>Video</option><option>Podcast</option>
+        </select>
+        <label class="font-semibold">Sort:</label>
+        <select id="media-sort-by" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+          <option value="date_desc">Newest</option><option value="date_asc">Oldest</option>
+        </select>
+      </div>
+
+      <div id="media-list" class="mt-8 grid md:grid-cols-2 gap-6"></div>
+    `;
+    const labPage = `
+  <h1 class="text-4xl md:text-5xl font-bold text-center">Automotive Retail Lab</h1>
+
+  <!-- Featured Lab Reel (moved directly under H1) -->
+  <section class="mt-8 relative overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-glow
+                  bg-gradient-to-br from-[#0b1f3a] via-[#163a63] to-[#0d6d7e]">
+    <!-- ambient accents -->
+    <div class="pointer-events-none absolute -top-24 -left-24 w-[30rem] h-[30rem] rounded-full bg-[#FFD233]/25 blur-3xl"></div>
+    <div class="pointer-events-none absolute -bottom-28 -right-16 w-[36rem] h-[36rem] rounded-full bg-cyan-300/20 blur-3xl"></div>
+
+    <div class="relative z-10 grid md:grid-cols-[1.65fr_.35fr] gap-6 items-stretch">
+      <!-- Poster: wider emphasis + richer overlay -->
+      <button
+        type="button"
+        class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/10"
+        onclick="openVideo(labVideos[0].youtubeUrl, labVideos[0].title)"
+        aria-label="Play ${labVideos[0].title}"
+      >
+        <img
+          src="${labVideos[0].poster}"
+          alt="${labVideos[0].title}"
+          class="w-full h-full object-cover max-md:aspect-video"
+          onerror="this.src='https://placehold.co/1280x720?text=Lab+Reel';this.onerror=null;"
+        />
+        <!-- thicker overlay for drama -->
+        <div class="absolute inset-0 bg-black/45 group-hover:bg-black/35 transition-colors"></div>
+
+        <!-- play control with pulse -->
+        <div class="absolute inset-0 grid place-items-center">
+          <span class="relative inline-grid place-items-center w-16 h-16 rounded-full bg-gold text-slate-900 shadow-lg ring-1 ring-black/10">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+              <path d="M8 5v14l11-7z"></path>
+            </svg>
+            <span class="absolute inset-0 rounded-full animate-ping bg-gold/30"></span>
+          </span>
+        </div>
+
+        <!-- bottom info band (wider-feel overlay) -->
+        <div class="absolute left-0 right-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+          <div class="text-sm md:text-base font-semibold">Featured: ${labVideos[0].title}</div>
+          <div class="text-xs md:text-sm text-white/85">${labVideos[0].blurb}</div>
+        </div>
+      </button>
+
+      <!-- Slim copy + tiny placeholders (reel-only) -->
+      <div class="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-4 md:p-5">
+        <h3 class="text-lg md:text-xl font-bold">Lab Reel Notes</h3>
+        <p class="mt-1 text-white/85 text-sm leading-relaxed">
+          A quick cut of our industry collaborations: EV traceability pilots, AI assistants for dealerships,
+          and omnichannel analytics at scale.
+        </p>
+
+        <!-- minimalist placeholders tied to the reel (not clickable) -->
+  <!-- (mini gallery removed by request) -->
+<p class="mt-4 text-white/80 text-xs md:text-sm">
+  Reel highlights: EV traceability pilots · AI assistants for dealerships · Omnichannel analytics at scale.
+</p>
+      </div>
+    </div>
+
+    <!-- Wider modal for playback -->
+    <div id="labVideoModal" class="hidden fixed inset-0 z-[80]">
+      <div class="absolute inset-0 bg-black/70" onclick="closeVideo()"></div>
+      <div class="relative mx-auto w-[98%] md:w-[94%] lg:w-[90%] xl:w-[88%] 2xl:w-[85%] max-w-none mt-10 md:mt-14
+                  rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900">
+        <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
+          <h4 id="labVideoTitle" class="text-white text-sm md:text-base font-semibold">Video</h4>
+          <button class="rounded-lg px-2 py-1 text-white/80 hover:text-white" onclick="closeVideo()" aria-label="Close video">✕</button>
+        </div>
+        <div class="video-wrap">
+          <iframe id="labVideoFrame"
+            src=""
+            title="Lab video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Focus (moved below the Reel) -->
+  <section class="mt-10 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow text-center">
+    <h2 class="text-2xl font-bold text-brand">Mission & Focus</h2>
+    <p class="mt-3 text-slate-700 dark:text-slate-300">
+      Advancing knowledge at the intersection of automotive retail, digital technology, and supply chain innovation, in partnership with industry and students.
+    </p>
+  </section>
+
+  <!-- Stats -->
+  <section class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50"><p class="text-3xl font-bold text-brand">15+</p><p class="text-slate-500 dark:text-slate-400 text-sm">Students Mentored</p></div>
+    <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50"><p class="text-3xl font-bold text-brand">20+</p><p class="text-slate-500 dark:text-slate-400 text-sm">Papers Published</p></div>
+    <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50"><p class="text-3xl font-bold text-brand">50+</p><p class="text-slate-500 dark:text-slate-400 text-sm">Media Mentions</p></div>
+    <div class="rounded-2xl p-5 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50"><p class="text-3xl font-bold text-brand">8</p><p class="text-slate-500 dark:text-slate-400 text-sm">Industry Partners</p></div>
+  </section>
+
+  <!-- Projects -->
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold text-center">Projects</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      ${labProjects.map(p=>`
+        <div class="rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+          <div class="flex items-start justify-between">
+            <h3 class="text-lg font-bold text-brand">${p.title}</h3>
+            <span class="text-xs px-2.5 py-0.5 rounded-full ${p.status==='Completed'||p.status==='Published'?'bg-green-100 text-green-800':'bg-amber-100 text-amber-800'}">${p.status}</span>
+          </div>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Collaborators: ${p.collaborators.join(', ')}</p>
+          <p class="mt-3 text-slate-700 dark:text-slate-300">${p.abstract}</p>
+        </div>
+      `).join('')}
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="mt-12">
+    <h2 class="text-2xl font-bold text-center">Partners & Sponsors</h2>
+    <div class="mt-6 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+        ${labPartners.map(p=>`<a href="${p.websiteUrl}" target="_blank"><img class="h-12 object-contain grayscale hover:grayscale-0 transition" src="${p.logoUrl}" alt="${p.name} logo"></a>`).join('')}
+      </div>
+    </div>
+  </section>
+
+  <!-- Join -->
+  <section class="mt-12 grid md:grid-cols-2 gap-6">
+    <div class="rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <h2 class="text-xl font-bold text-brand">Opportunities</h2>
+      <p class="mt-2 text-slate-700 dark:text-slate-300">We welcome passionate students for RAs and independent studies. Review projects and send your CV & statement via the form.</p>
+    </div>
+    <div class="rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow text-center">
+      <h2 class="text-xl font-bold">Join the Lab</h2>
+      <a href="${professor.googleFormUrl}" target="_blank" class="inline-flex mt-4 items-center gap-2 px-6 py-3 rounded-xl bg-brand text-white font-semibold hover:bg-brandDark">Contact Us</a>
+    </div>
+  </section>
+`;
+
+
+    const notFoundPage = `
+      <div class="text-center py-24">
+        <h1 class="text-6xl font-bold text-brand">404</h1>
+        <p class="mt-3 text-slate-600 dark:text-slate-400">Sorry, the page you’re looking for doesn’t exist.</p>
+        <a href="#home" class="inline-flex mt-6 items-center gap-2 px-5 py-3 rounded-xl bg-brand text-white font-semibold hover:bg-brandDark">Back Home</a>
+      </div>
+    `;
+
+    const FT50_IDS = new Set([
+      "isr-2025-achievement-goals",
+      "poms-2024-innovation",
+      "poms-2024-inventory-variety",
+      "poms-2021-dealers"
+    ]);
+
+
+    // ---------- RENDERERS ----------
+    const main = document.getElementById('main');
+
+  function renderResearch(){
+  main.innerHTML = researchPage;
+
+  const tagFilter = document.getElementById('tag-filter');
+  const sortBy    = document.getElementById('sort-by');
+  const ftGrid    = document.getElementById('ft50-grid');
+  const otherGrid = document.getElementById('other-grid');
+  const viewSel   = document.getElementById('view-density');
+
+  // Build tag list
+  const tags = Array.from(new Set(researchItems.flatMap(i => i.tags)));
+  tagFilter.innerHTML = `<option value="all">All Tags</option>` + tags.map(t => `<option>${t}</option>`).join('');
+
+  // FT-50 IDs (exactly the four you listed)
+  const ft50Ids = new Set([
+    'isr-2025-achievement-goals',
+    'poms-2024-innovation',
+    'poms-2024-inventory-variety',
+    'poms-2021-dealers'
+  ]);
+
+  // Card template
+  // ⛔️ DELETE your current `const card = (i) => { ... }`
+// ✅ PASTE this version in its place:
+const card = (i) => {
+  const thumb   = i.image || `assets/research/${i.id}.jpg`;
+  const safeAlt = `${i.title} — ${i.venue}`;
+  const paperLink =
+    (i.links && (i.links.pdfUrl || i.links.publisherUrl || i.links.openUrl)) || "";
+
+  return `
+    <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-glow transition-transform hover:-translate-y-1">
+      <!-- Journal header -->
+      <div class="pub-label">
+        ${i.venue}
+      </div>
+
+      <!-- Visual -->
+      <figure class="mt-0 mb-0">
+        <div class="aspect-[16/10] rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800">
+          <img
+            src="${thumb}"
+            alt="${safeAlt}"
+            class="w-full h-full object-cover object-center"
+            loading="lazy" decoding="async"
+            onerror="this.src='https://placehold.co/1200x800?text=Paper+Preview';this.onerror=null;"
+          />
+        </div>
+      </figure>
+
+      <!-- Content box: Title → Authors → Abstract -->
+    <div class="mx-3 mt-2 mb-2 rounded-lg border border-amber-300/50 bg-amber-50/85 dark:bg-amber-200/10 p-3 md:p-4 grid gap-3">
+  <h3 class="text-center font-extrabold text-slate-900 text-[16px] md:text-[17px] leading-[1.25]">
+    <span>${i.title}</span>
+    <span class="ml-2 align-middle text-[11px] md:text-[12px] font-semibold text-slate-500/70" aria-label="Publication year">
+      • ${i.year}
+    </span>
+  </h3>
+
+  <div class="text-center italic text-slate-600 dark:text-slate-300 text-[12px] md:text-[13px]">
+    ${i.authors}
+  </div>
+
+  <p class="text-center text-slate-700 dark:text-slate-300 text-[13.5px] md:text-[14px] leading-[1.45]">
+    ${i.abstract}
+  </p>
+
+  ${
+    paperLink
+      ? `<a href="${paperLink}" target="_blank" rel="noopener noreferrer"
+           class="place-self-center inline-flex items-center justify-center px-4 py-2 rounded-md bg-gold text-slate-900 font-extrabold tracking-[.18em] text-[10.5px] hover:brightness-95">
+           REQUEST FULL PAPER
+         </a>`
+      : `<button type="button" aria-disabled="true"
+           class="place-self-center inline-flex items-center justify-center px-4 py-2 rounded-md bg-slate-300 text-slate-700 font-extrabold tracking-[.18em] text-[10.5px] opacity-60 cursor-not-allowed">
+           COMING SOON
+         </button>`
+  }
+</div>
+    </article>
+  `;
+};
+
+function draw(){
+  const tag  = tagFilter.value;
+  const sort = sortBy.value;
+  const view = viewSel ? viewSel.value : 'comfy';
+
+  let list = researchItems.slice();
+  if(tag !== 'all') list = list.filter(i => i.tags.includes(tag));
+  list.sort((a,b) => sort === 'year_asc' ? a.year - b.year : b.year - a.year);
+  teaching
+  // density-aware grids
+  if(view === 'compact'){
+    ftGrid.className    = "mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6";
+    otherGrid.className = "mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6";
+  }else{
+    ftGrid.className    = "mt-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-7";
+    otherGrid.className = "mt-6 grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-7";
+  }
+
+  const ftList    = list.filter(i => ft50Ids.has(i.id));
+  const otherList = list.filter(i => !ft50Ids.has(i.id));
+
+  ftGrid.innerHTML    = ftList.length
+    ? ftList.map(card).join('')
+    : `<p class="text-slate-500">No FT-50 items match the filters.</p>`;
+
+  otherGrid.innerHTML = otherList.length
+    ? otherList.map(card).join('')
+    : `<p class="text-slate-500">No other items match the filters.</p>`;
+}
+
+  tagFilter.addEventListener('change', draw);
+  sortBy.addEventListener('change', draw);
+  viewSel?.addEventListener('change', draw);
+  draw();
+}
+
+function renderTeaching(){
+  main.innerHTML = teachingPage;
+
+  const instSel  = document.getElementById('teach-inst');
+  const lvlSel   = document.getElementById('teach-level');
+  const grid     = document.getElementById('teach-grid');
+  const countEl  = document.getElementById('teach-count');
+  const advising = document.getElementById('advising-list');
+
+  // Build institution list
+  const institutions = Array.from(new Set(teaching.courses.map(c => c.institution)));
+  instSel.innerHTML = `<option value="all" selected>All</option>` + institutions.map(i => `<option>${i}</option>`).join('');
+
+  // Card template (brand-matched)
+  const card = (c) => `
+    <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-glow transition hover:-translate-y-0.5">
+      <div class="bg-amber-100/80 dark:bg-amber-200/15 text-brand dark:text-amber-200 uppercase tracking-[.20em] text-center text-xs font-extrabold py-3 border-b border-amber-300/60">
+        ${c.institution}
+      </div>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-bold text-brand">${c.code}: ${c.title}</h3>
+          <span class="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800">${c.level}</span>
+        </div>
+        <p class="mt-1 text-sm text-slate-500 dark:text-slate-400"> ${c.years}</p>
+      </div>
+    </div>
+  `;
+
+  // Advising item
+  const advisingItem = (a) => `
+    <li class="rounded-xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50">
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-semibold text-brand">${a.institution} • ${a.type}</span>
+        <span class="text-xs text-slate-500 dark:text-slate-400">${a.years}</span>
+      </div>
+      <div class="mt-1 text-[15px] font-medium">${a.title}</div>
+      <div class="text-sm text-slate-600 dark:text-slate-400">${a.role}</div>
+    </li>
+  `;
+
+  // Parse "2019–2023", "2023–present", "2017-2018" → {start, end}
+  const getYearRange = (yearsStr) => {
+    if (!yearsStr) return { start: -Infinity, end: -Infinity };
+    const cleaned = yearsStr.toString().toLowerCase().replace(/[–—-]/g, '-').trim();
+    const [startStr, endStr] = cleaned.split('-').map(s => s.trim());
+    const start = parseInt(startStr, 10);
+    const end = (!endStr || endStr.includes('present')) ? 9999 : parseInt(endStr, 10);
+    return {
+      start: isNaN(start) ? -Infinity : start,
+      end: isNaN(end) ? (isNaN(start) ? -Infinity : start) : end
+    };
+  };
+
+  function draw(){
+    const inst = instSel.value;
+    const lvl  = lvlSel.value;
+
+    let list = teaching.courses.slice();
+    if(inst !== 'all') list = list.filter(c => c.institution === inst);
+    if(lvl  !== 'all') list = list.filter(c => c.level === lvl);
+
+    // Order by institution, then years desc
+    list.sort((a, b) => {
+      const A = getYearRange(a.years);
+      const B = getYearRange(b.years);
+      return (B.end - A.end) || (B.start - A.start) || a.title.localeCompare(b.title);
+    });
+
+    grid.innerHTML = list.map(card).join('');
+    countEl.textContent = `${list.length} course${list.length===1?'':'s'}`;
+
+    advising.innerHTML = teaching.advising.map(advisingItem).join('');
+  }
+
+  instSel.addEventListener('change', draw);
+  lvlSel.addEventListener('change', draw);
+  draw();
+}
+
+function renderMedia()
+{
+  main.innerHTML = mediaPage;
+
+  const typeSel = document.getElementById('media-type-filter');
+  const sortSel = document.getElementById('media-sort-by');
+  const listEl  = document.getElementById('media-list');
+
+  // Map each outlet to its image in /Images
+  const mediaImages = {
+    'The New York Times': 'Images/NYTImg.png',
+    'Politico': 'Images/Politico.png',
+    'NPR': 'Images/NPR.png',
+    'Fox 5 Atlanta': 'Images/Fox5.png',
+    'Atlanta Journal-Constitution': 'Images/AJC.png',
+    'Auto Weekly Podcast': 'Images/AutoWeekly.png',
+    'Business News Network': 'Images/BNN.png',
+    'The Digital Consumer': 'Images/DigitalConsumer.png'
+    // add/edit as needed to match your filenames
+  };
+
+  // ---- helpers ----
+  const mediaImg = (m) => {
+    // Prefer explicit image on the item, else use outlet map, else a clean placeholder
+    if (m.image) return m.image;
+    const key = (m.outlet || '').trim();
+    return mediaImages[key] || `https://placehold.co/800x450?text=${encodeURIComponent(key || 'Media')}`;
+  };
+
+  const typeIcon = (t='Article') => {
+    const tt = t.toLowerCase();
+    if(tt==='video')   return `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14v2a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h8a2 2 0 012 2v2z"/></svg>`;
+    if(tt==='podcast') return `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a7 7 0 00-7 7 7 7 0 005 6.708V22h4v-5.292A7 7 0 0019 10a7 7 0 00-7-7zm0 4a3 3 0 110 6 3 3 0 010-6z"/></svg>`;
+    if(tt==='interview') return `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h18v10H7l-4 4V5z"/></svg>`;
+    return `<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16v16H4z"/></svg>`;
+  };
+
+  const typeBadgeClass = (t='Article') => {
+    const tt = t.toLowerCase();
+    if(tt==='video')     return 'bg-red-500/90 text-white';
+    if(tt==='podcast')   return 'bg-purple-500/90 text-white';
+    if(tt==='interview') return 'bg-emerald-500/90 text-white';
+    return 'bg-white/90 text-slate-900 dark:bg-black/60 dark:text-white/90';
+  };
+  
+  // Pretty date (e.g., "Mar 26, 2024"); falls back to original if not ISO
+  const prettyDate = (d) => {
+    const dt = new Date(d);
+    return isNaN(dt) ? (d || "") : dt.toLocaleDateString(undefined, { month: "short", day: "2-digit", year: "numeric" });
+  };
+
+// Round icon button matching the item type
+const typeGlyph = (t = "Article") => {
+  const kind = (t || "").toLowerCase();
+  const icon =
+    kind === "video"
+      ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6h7a2 2 0 0 1 2 2v1l3.2-1.6A1 1 0 0 1 21 8.3v7.4a1 1 0 0 1-1.8.9L17 15v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/></svg>`
+      : kind === "podcast"
+      ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a7 7 0 0 0-7 7 7 7 0 0 0 5 6.7V22h4v-5.3A7 7 0 0 0 19 10a7 7 0 0 0-7-7zm0 4a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>`
+      : kind === "interview"
+      ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5h12a2 2 0 0 1 2 2v3l4-2v8l-4-2v3a2 2 0 0 1-2 2H3z"/></svg>`
+      : `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm9 1.5V8h4.5"/></svg>`;
+  // gold matches your Tailwind theme extension
+  return `<span class="inline-grid place-items-center w-9 h-9 rounded-full bg-gold text-slate-900 shadow-md">${icon}</span>`;
+};
+
+// ---- Card (image → meta bubble → title/excerpt) ----
+const card = (m) => `
+  <a href="${m.url}" target="_blank" rel="noreferrer"
+     class="group block rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow hover:-translate-y-0.5 transition">
+
+    <!-- visual -->
+    <div class="relative overflow-hidden rounded-xl border-b border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800">
+      <img
+        src="${mediaImg(m)}"
+        alt="${m.outlet} — ${m.title}"
+        class="block w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+        style="aspect-ratio:16/9;"
+        loading="lazy" decoding="async"
+        onerror="this.src='https://placehold.co/800x450?text=Media';this.onerror=null;"
+      />
+    </div>
+
+    <!-- body -->
+    <div class="p-4">
+
+      <!-- flexible meta container sitting right under the image -->
+      <div class="flex items-center justify-between -mt-5 mb-2">
+        <div class="meta-bubble flex items-center gap-2 px-3 py-1.5 rounded-xl
+                    bg-white/90 dark:bg-slate-900/70 backdrop-blur-md
+                    shadow-md ring-1 ring-black/10 dark:ring-white/10
+                    max-w-[85%]">
+          <span class="text-[11px] font-semibold uppercase tracking-wide text-slate-800 dark:text-white/90 truncate">
+            ${m.outlet}
+          </span>
+          <span class="text-[11px] text-slate-600/90 dark:text-white/70 whitespace-nowrap">
+            • ${prettyDate(m.date)}
+          </span>
+        </div> 
+
+        <!-- type glyph on the right (play/mic/headphones/doc) -->
+        <div class="shrink-0 ml-3">${typeGlyph(m.type)}</div>
+      </div>
+
+      <h3 class="text-lg font-bold text-brand leading-snug group-hover:underline underline-offset-4 decoration-gold/60">
+        ${m.title}
+      </h3>
+      <p class="mt-1 text-sm italic text-slate-600 dark:text-slate-300">“${m.excerpt}”</p>
+    </div>
+  </a>
+`;
+
+  function draw(){
+    const t = typeSel.value;
+    const s = sortSel.value;
+    let list = mediaItems.slice();
+
+    if(t !== 'all') list = list.filter(m => m.type === t);
+    list.sort((a,b)=> s==='date_asc'
+      ? new Date(a.date)-new Date(b.date)
+      : new Date(b.date)-new Date(a.date));
+
+    listEl.innerHTML = list.length
+      ? list.map(card).join('')
+      : `<p class="text-center text-slate-500">No media match the filters.</p>`;
+  }
+
+  typeSel.addEventListener('change', draw);
+  sortSel.addEventListener('change', draw);
+  draw();
+}
+
+function renderResources(){
+  document.title = `Resources | ${professor.name} Portfolio`;
+
+  // ---- meta for types (icon + colors) ----
+  const typeMeta = {
+    dataset:  { label: "Dataset",  chip: "bg-sky-50 text-sky-800 border-sky-200 dark:bg-sky-900/20 dark:text-sky-200 dark:border-sky-800",  icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3c-4.97 0-9 1.79-9 4v10c0 2.21 4.03 4 9 4s9-1.79 9-4V7c0-2.21-4.03-4-9-4zm0 2c3.87 0 7 .9 7 2s-3.13 2-7 2-7-.9-7-2 .13-2 7-2zm0 12c-3.87 0-7-.9-7-2V9c1.66 1.07 4.72 1.75 7 1.75S17.34 10.07 19 9v6c0 1.1-3.13 2-7 2z"/></svg>` },
+    dashboard:{ label: "Dashboard",chip: "bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-900/20 dark:text-emerald-200 dark:border-emerald-800",icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 3h8v8H3V3zm10 0h8v5h-8V3zM3 13h5v8H3v-8zm7 0h11v8H10v-8z"/></svg>` },
+    journal:  { label: "Journal",  chip: "bg-indigo-50 text-indigo-800 border-indigo-200 dark:bg-indigo-900/20 dark:text-indigo-200 dark:border-indigo-800",  icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 2h11a2 2 0 0 1 2 2v15a3 3 0 0 1-3 3H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a1 1 0 0 0 1-1V4H6z"/></svg>` },
+    industry: { label: "Industry", chip: "bg-amber-50 text-amber-900 border-amber-200 dark:bg-amber-900/20 dark:text-amber-200 dark:border-amber-800", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2 21h20v-2H2v2zm2-4h16V3l-6 5V3l-6 5V3H4v14z"/></svg>` },
+    policy:   { label: "Policy",   chip: "bg-rose-50 text-rose-800 border-rose-200 dark:bg-rose-900/20 dark:text-rose-200 dark:border-rose-800",    icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm9 1.5V8h4.5"/></svg>` },
+    course:   { label: "Course",   chip: "bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200 dark:bg-fuchsia-900/20 dark:text-fuchsia-200 dark:border-fuchsia-800", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.18 12.4L12 17l8.82-4.6L12 7.8 3.18 12.4z"/></svg>` },
+    center:   { label: "Center",   chip: "bg-cyan-50 text-cyan-800 border-cyan-200 dark:bg-cyan-900/20 dark:text-cyan-200 dark:border-cyan-800",   icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>` },
+    book:     { label: "Book",     chip: "bg-stone-50 text-stone-800 border-stone-200 dark:bg-stone-900/20 dark:text-stone-200 dark:border-stone-800", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4zm3 2v11h11V7a1 1 0 0 0-1-1H7z"/></svg>` },
+    tool:     { label: "Tool",     chip: "bg-teal-50 text-teal-800 border-teal-200 dark:bg-teal-900/20 dark:text-teal-200 dark:border-teal-800",     icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7 14l-5 5 3 3 5-5-3-3zm13.7-9.3a4 4 0 0 0-6.4 1.5l-8 8L9.8 18l8-8a4 4 0 0 0 1.5-6.3z"/></svg>` },
+  };
+
+  // desired order across the grid
+  const TYPE_ORDER = ["Dataset","Dashboard","Journal","Industry","Policy","Course","Center","Book","Tool"];
+
+  // helpers
+  const hostFromUrl = (u) => {
+    try { return new URL(u).hostname.replace(/^www\./,''); } catch { return ""; }
+  };
+  const metaFor = (t) => typeMeta[(t||"").toLowerCase()] || { chip:"bg-slate-100 text-slate-800 border-slate-200 dark:bg-slate-800/40 dark:text-slate-200 dark:border-slate-700", label:t||"Resource", icon:"" };
+
+  const allTypes = Array.from(new Set(resources.map(r => r.type))).sort((a,b)=> TYPE_ORDER.indexOf(a) - TYPE_ORDER.indexOf(b));
+  let activeTypes = new Set(allTypes);     // default: show all
+  let viewDensity = "comfy";               // "comfy" | "compact"
+  let sortMode    = "type";                // "type" | "title"
+  let q           = "";                    // search query
+
+  // UI skeleton
+  const hero = `
+    <section class="reveal relative overflow-hidden rounded-3xl p-7 md:p-9 text-white shadow-glow bg-gradient-to-br from-[#0b1f3a] via-[#163a63] to-[#0d6d7e]">
+      <div class="pointer-events-none absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-[#FFD233]/25 blur-3xl"></div>
+      <div class="pointer-events-none absolute -bottom-28 -right-16 w-[34rem] h-[34rem] rounded-full bg-cyan-300/20 blur-3xl"></div>
+      <div class="relative z-10">
+        <h1 class="text-3xl md:text-4xl font-bold">Resources</h1>
+        <p class="mt-2 text-white/85 max-w-3xl">Curated datasets, dashboards, journals, policy links, and teaching tools used in Dr. Golara’s research, classroom, and the Automotive Retail Lab.</p>
+      </div>
+    </section>
+  `;
+
+  const controls = `
+    <section class="reveal sticky top-16 z-40 mt-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl shadow-glow">
+      <div class="p-4 flex flex-wrap gap-3 items-center">
+        <div class="flex-1 min-w-[220px]">
+          <label class="sr-only" for="res-search">Search</label>
+          <div class="flex items-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="opacity-70"><path d="M10 2a8 8 0 015.29 13.71l4 4-1.42 1.42-4-4A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>
+            <input id="res-search" placeholder="Search title or description…" class="w-full bg-transparent outline-none text-sm" />
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <label class="text-xs font-semibold">Preset:</label>
+          <select id="res-preset" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
+            <option value="all">All</option>
+            <option value="students">Students</option>
+            <option value="researchers">Researchers</option>
+            <option value="industry">Industry</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <label class="text-xs font-semibold">Sort:</label>
+          <select id="res-sort" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
+            <option value="type">By Type</option>
+            <option value="title">Title A–Z</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <label class="text-xs font-semibold">View:</label>
+          <select id="res-density" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
+            <option value="comfy">Comfortable</option>
+            <option value="compact">Compact</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- chips -->
+      <div class="px-4 pb-4 flex flex-wrap gap-2" id="res-chipbar"></div>
+    </section>
+  `;
+
+  const groupHeader = (label) => `
+    <div class="news-label mt-8 mx-1 rounded-t-[14px]">${label}</div>
+  `;
+
+  const card = (r) => {
+    const meta = metaFor(r.type);
+    const icon = meta.icon || "";
+    const domain = hostFromUrl(r.url);
+    const density = viewDensity === "compact" ? "p-4" : "p-5";
+    const titleCls = viewDensity === "compact" ? "text-[15px]" : "text-lg";
+    const descCls  = viewDensity === "compact" ? "text-[13px]" : "text-[14px]";
+
+    return `
+      <a href="${r.url}" target="_blank" rel="noreferrer"
+         class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-glow hover:-translate-y-0.5 transition">
+        <div class="${density}">
+          <div class="flex items-center justify-between gap-3">
+            <span class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border ${meta.chip}">
+              ${icon}
+              <span class="text-[11px] font-bold uppercase tracking-wide">${r.type}</span>
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400">${domain}</span>
+          </div>
+          <h3 class="mt-3 ${titleCls} font-bold text-brand leading-snug group-hover:underline underline-offset-4 decoration-gold/60">
+            ${r.title}
+          </h3>
+          <p class="mt-1 ${descCls} text-slate-600 dark:text-slate-300">${r.description}</p>
+
+          <div class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand">
+            Visit resource
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z"/></svg>
+          </div>
+        </div>
+      </a>
+    `;
+  };
+
+  const drawChips = () => {
+    const el = document.getElementById('res-chipbar');
+    const counts = Object.fromEntries(allTypes.map(t => [t, resources.filter(r => r.type === t).length]));
+    el.innerHTML = allTypes.map(t => {
+      const active = activeTypes.has(t);
+      const meta   = metaFor(t);
+      return `
+        <button data-type="${t}"
+          class="chip inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border ${meta.chip} ${active ? 'ring-2 ring-[var(--ring)]' : ''}"
+          aria-pressed="${active}">
+          <span class="text-xs font-semibold">${t}</span>
+          <span class="text-[10px] opacity-70">${counts[t]}</span>
+        </button>
+      `;
+    }).join('');
+    // handlers
+    el.querySelectorAll('button[data-type]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const t = btn.getAttribute('data-type');
+        if(activeTypes.has(t)) activeTypes.delete(t); else activeTypes.add(t);
+        drawChips();
+        drawGrid();
+      });
+    });
+  };
+
+  const filtered = () => {
+    const types = activeTypes;
+    const qlc = q.trim().toLowerCase();
+    return resources.filter(r => types.has(r.type))
+      .filter(r => !qlc || r.title.toLowerCase().includes(qlc) || r.description.toLowerCase().includes(qlc));
+  };
+
+  const grouped = (list) => {
+    const g = {};
+    list.forEach(r=>{
+      (g[r.type] ||= []).push(r);
+    });
+    // sort each group by title
+    Object.values(g).forEach(arr => arr.sort((a,b)=> a.title.localeCompare(b.title)));
+    return g;
+  };
+
+  const drawGrid = () => {
+    const mount = document.getElementById('resources-mount');
+    let list = filtered();
+
+    // top-level sort
+    if(sortMode === 'title'){
+      // simple unified sort
+      list.sort((a,b)=> a.title.localeCompare(b.title));
+      mount.innerHTML = `
+        <div class="mt-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+          ${list.map(card).join('')}
+        </div>
+      `;
+      return;
+    }
+
+    // group by type, in our preferred order
+    const g = grouped(list);
+    const blocks = TYPE_ORDER
+      .filter(t => g[t]?.length)
+      .map(t => `
+        ${groupHeader(t)}
+        <div class="rounded-b-2xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md p-5">
+          <div class="${viewDensity==='compact'
+            ? 'grid sm:grid-cols-2 md:grid-cols-3 gap-4'
+            : 'grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'}">
+            ${g[t].map(card).join('')}
+          </div>
+        </div>
+      `).join('');
+
+    mount.innerHTML = blocks || `<p class="mt-8 text-center text-slate-500">No resources match your filters.</p>`;
+  };
+
+  // mount page
+  const page = `
+    ${hero}
+    ${controls}
+    <section id="resources-mount" class="mt-4"></section>
+  `;
+  main.innerHTML = page;
+
+  // wire controls
+  const search = document.getElementById('res-search');
+  const preset = document.getElementById('res-preset');
+  const sort   = document.getElementById('res-sort');
+  const dens   = document.getElementById('res-density');
+
+  search.addEventListener('input', (e)=>{ q = e.target.value || ""; drawGrid(); });
+  sort.addEventListener('change', (e)=>{ sortMode = e.target.value; drawGrid(); });
+  dens.addEventListener('change', (e)=>{ viewDensity = e.target.value; drawGrid(); });
+  preset.addEventListener('change', (e)=>{
+    const v = e.target.value;
+    if(v === 'all'){ activeTypes = new Set(allTypes); }
+    else if(v === 'students'){ activeTypes = new Set(["Course","Dataset","Dashboard","Tool"]); }
+    else if(v === 'researchers'){ activeTypes = new Set(["Journal","Dataset","Policy","Dashboard"]); }
+    else if(v === 'industry'){ activeTypes = new Set(["Industry","Dashboard","Policy","Dataset"]); }
+    drawChips(); drawGrid();
+  });
+
+  // initial paint
+  drawChips();
+  drawGrid();
+
+  // reveal animations
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+
+    // ---------- ROUTER ----------
+    const routes = {
+      'home':   { template: homePage,  title: `Home | ${professor.name} Portfolio` },
+      'research': { render: renderResearch, title: `Research | ${professor.name} Portfolio` },
+      'teaching': { render: renderTeaching, title: `Teaching | ${professor.name} Portfolio` },
+      'media':    { render: renderMedia, title: `Media | ${professor.name} Portfolio` },
+      'lab':      { template: labPage, title: `Automotive Retail Lab | ${professor.name} Portfolio` },
+      'resources': { render: renderResources, title: `Resources | ${professor.name} Portfolio` },
+      '404':      { template: notFoundPage, title: `404 Not Found | ${professor.name} Portfolio` },
+    };
+
+    function router(){
+      const path = (location.hash.slice(1) || 'home').split('?')[0];
+      const r = routes[path] || routes['404'];
+      if(r.template) main.innerHTML = r.template; else if(r.render) r.render();
+      document.title = r.title;
+
+      // active nav
+      document.querySelectorAll('.nav-link').forEach(a=>{
+        a.classList.toggle('active', a.getAttribute('href').slice(1) === path);
+      });
+
+      // reveal
+      const io = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+      }, { threshold: .12 });
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+      scrollTo({top:0, behavior:'smooth'});
+    }
+    window.addEventListener('hashchange', router);
+
+    // ---------- UI: header/menu/theme/progress ----------
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+
+    // Theme toggle
+    const html = document.documentElement;
+    const modeBtn = document.getElementById('modeBtn');
+    const modeBtnM = document.getElementById('modeBtnM');
+    const modeIcon = document.getElementById('modeIcon');
+    function setMode(dark){
+      html.classList.toggle('dark', dark);
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+      if(modeIcon) modeIcon.textContent = dark ? '☀️' : '🌙';
+    }
+    const preferredDark = localStorage.getItem('theme') ? localStorage.getItem('theme')==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setMode(preferredDark);
+    modeBtn?.addEventListener('click', ()=> setMode(!html.classList.contains('dark')));
+    modeBtnM?.addEventListener('click', ()=> setMode(!html.classList.contains('dark')));
+
+    // Scroll progress bar
+    const progress = document.getElementById('progress');
+    function setProgress(){
+      const h = document.documentElement;
+      const scrolled = (h.scrollTop)/(h.scrollHeight - h.clientHeight);
+      progress.style.width = (scrolled*100)+'%';
+    }
+    document.addEventListener('scroll', setProgress, { passive:true });
+
+    // Footer & socials
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const footerEmail = document.getElementById('footer-email'); if(footerEmail){ footerEmail.textContent = professor.email; footerEmail.href = `mailto:${professor.email}`; }
+    const gform = document.getElementById('footer-gform'); if(gform) gform.href = professor.googleFormUrl;
+   //document.getElementById('ig').href = professor.socials.instagramUrl;
+    document.getElementById('li').href = professor.socials.linkedinUrl;
+    document.getElementById('x').href = professor.socials.xUrl;
+
+    // init
+    router();
+    setProgress();
+
+    /* ---- Video modal helpers (scoped, accessible) ---- */
+function openVideo(url, title){
+  const modal = document.getElementById('labVideoModal');
+  const frame = document.getElementById('labVideoFrame');
+  const label = document.getElementById('labVideoTitle');
+  if(!modal || !frame) return;
+
+  const joiner = url.includes('?') ? '&' : '?';
+  frame.src = `${url}${joiner}autoplay=1`;
+  if(label) label.textContent = title || 'Video';
+  modal.classList.remove('hidden');
+
+  // prevent background scroll
+  document.documentElement.classList.add('overflow-hidden');
+  document.body.classList.add('overflow-hidden');
+}
+
+function closeVideo(){
+  const modal = document.getElementById('labVideoModal');
+  const frame = document.getElementById('labVideoFrame');
+  if(!modal || !frame) return;
+
+  frame.src = ""; // stop playback
+  modal.classList.add('hidden');
+  document.documentElement.classList.remove('overflow-hidden');
+  document.body.classList.remove('overflow-hidden');
+}
+
+// Esc to close
+document.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape') closeVideo();
+});
+
+  </script>
+  <!-- Contact Modal -->
+<div id="contactModal" class="hidden fixed inset-0 z-[90]">
+  <div class="absolute inset-0 bg-black/60" onclick="closeContact()"></div>
+  <div class="relative mx-auto w-[92%] max-w-lg mt-24 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-glow">
+    <div class="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-700">
+      <h3 class="text-lg font-bold">Contact Dr. Golara</h3>
+      <button class="rounded-lg px-2 py-1" onclick="closeContact()">✕</button>
+    </div>
+    <form id="contactForm" class="mt-4 grid gap-3">
+      <input name="name" type="text" placeholder="Your name" required
+             class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"/>
+      <input name="email" type="email" placeholder="Your email" required
+             class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"/>
+      <textarea name="message" rows="5" placeholder="How can we help?" required
+                class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></textarea>
+      <!-- Honeypot (spam trap) -->
+      <input name="company" type="text" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
+      <button type="submit" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-brand text-white font-semibold hover:bg-brandDark">
+        Send
+      </button>
+      <p class="text-xs text-slate-500">We’ll reply by email.</p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
