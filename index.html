@@ -348,7 +348,15 @@
   
 </style>
 
-
+<script>
+  (function () {
+    var loc = window.location.href.split('#')[0];
+    var c = document.querySelector('link[rel="canonical"]');
+    if (c) c.setAttribute('href', loc);
+    var og = document.querySelector('meta[property="og:url"]');
+    if (og) og.setAttribute('content', loc);
+  })();
+  </script>
 
 </head>
 
