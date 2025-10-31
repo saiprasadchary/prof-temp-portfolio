@@ -358,6 +358,15 @@
   })();
   </script>
 
+<script>
+  (function () {
+    // Default to LIGHT if no saved choice
+    const saved = localStorage.getItem('theme');
+    const dark = saved ? saved === 'dark' : false;
+    if (dark) document.documentElement.classList.add('dark');
+  })();
+</script>
+
 </head>
 
 <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
@@ -2178,8 +2187,9 @@ function renderResources(){
       localStorage.setItem('theme', dark ? 'dark' : 'light');
       if(modeIcon) modeIcon.textContent = dark ? '☀️' : '🌙';
     }
-    const preferredDark = localStorage.getItem('theme') ? localStorage.getItem('theme')==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setMode(preferredDark);
+    const savedTheme = localStorage.getItem('theme');
+    setMode(savedTheme ? savedTheme === 'dark' : false);
+
     modeBtn?.addEventListener('click', ()=> setMode(!html.classList.contains('dark')));
     modeBtnM?.addEventListener('click', ()=> setMode(!html.classList.contains('dark')));
 
