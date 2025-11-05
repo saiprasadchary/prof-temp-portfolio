@@ -18,64 +18,6 @@
   <meta name="twitter:description" content="Research, teaching, media & lab initiatives." />
   <meta name="twitter:image" content="https://placehold.co/1200x630/003366/FFFFFF?text=Sina+Golara" />
 
-  <!-- Canonical & robots (use GH Pages URL while testing; switch to sinagolara.com when live) -->
-<link rel="canonical" href="https://sinagolara.com/">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-
-<!-- Open Graph extras -->
-<meta property="og:site_name" content="Sina Golara">
-<meta property="og:url" content="https://sinagolara.com/">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-
-<!-- Twitter extras (optional: add the real handle if available) -->
-<meta name="twitter:site" content="@GolaraSina">
-<meta name="twitter:creator" content="@GolaraSina">
-
-<!-- Theme color (nice on mobile address bar) -->
-<meta name="theme-color" content="#003366">
-
-<link rel="me" href="https://www.linkedin.com/in/sinagolara/">
-
-<link rel="me" href="https://x.com/GolaraSina">
-
-<!-- Structured data: Person -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sina Golara",
-  "url": "https://sinagolara.com/",
-  "jobTitle": "Assistant Professor of Supply Chain Management",
-  "affiliation": {
-    "@type": "CollegeOrUniversity",
-    "name": "Georgia State University – J. Mack Robinson College of Business",
-    "url": "https://robinson.gsu.edu/"
-  },
-  "sameAs": [
-    "https://robinson.gsu.edu/profile/sina-golara/",
-    "https://www.linkedin.com/in/sinagolara/",
-    "https://scholar.google.com/citations?user=<scholar-id>"
-  ]
-}
-</script>
-
-<!-- Structured data: WebSite -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "url": "https://sinagolara.com/",
-  "name": "Sina Golara | Professor Portfolio",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://sinagolara.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -118,31 +60,6 @@
     border-radius:.5rem;z-index:9999
   }
   .skip-link:focus{left:12px}
-
-  /* gradient vars (tweak freely) */
-:root{
-  --grad-a:#0b1f3a;   /* deep brand blue */
-  --grad-b:#163a63;   /* mid tone */
-  --grad-c:#FFD233;   /* gold */
-}
-
-/* Make both News + Publications headers share the same look */
-.news-card .news-label,
-.pub-card  .pub-label{
-  background: linear-gradient(90deg,var(--grad-a),var(--grad-b) 55%,var(--grad-c));
-  color:#fff;
-  border-top-left-radius:14px;
-  border-top-right-radius:14px;
-  padding:1rem 1rem .5rem;
-  text-transform:uppercase;
-  letter-spacing:.18em;
-  font-weight:800;
-  font-size:.85rem;
-  text-align:center;
-}
-
-/* Ensure the rounded band blends cleanly with the card */
-.news-card, .pub-card { overflow:hidden; }
 
   /* Fancy underline for nav */
   .nav-link{position:relative}
@@ -199,7 +116,7 @@
   .pub-grid > .pub-card:hover{ transform:translateY(-6px); } /* just a small lift on hover */
 }
 
-  .news-card .news-label{
+.news-card .news-label{
     min-height:24px;
     padding:1rem 1rem .5rem;
     text-transform:uppercase;
@@ -209,18 +126,6 @@
     text-align:center;
     color:rgba(255,255,255,.9);
   }
-    .news-card .news-summary{
-    padding:.75rem 1.25rem 0;
-    color:rgba(255,255,255,.92);
-    line-height:1.75;
-    text-align:center;
-  }
-  .news-card .news-label{
-  background:linear-gradient(90deg,#003366,#FFD233);
-  border-top-left-radius:12px;border-top-right-radius:12px;
-}
-  
-
   .news-card .news-media{ padding:0 1rem; }
   .news-card img{
     display:block;
@@ -345,27 +250,104 @@
   border:8px solid transparent;border-top-color:rgba(255,255,255,.9); /* matches bg */
 }
 .dark .meta-bubble::after{ border-top-color:rgba(2,6,23,.72) } /* ~slate-900/70 */
+
+
+/* ===== Highlights (Neutral, no gradients, no blue) ===== */
+.highlights{
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(15,23,42,.12); /* slate-900/12 */
+  border-radius: 1.5rem;                /* 24px */
+}
+.dark .highlights{
+  background: rgba(2,6,23,.72);         /* ~slate-900/70 */
+  border-color: rgba(255,255,255,.14);
+}
+
+.highlights .section-title{ color:#0f172a; }         /* slate-900 */
+.dark .highlights .section-title{ color:#fff; }
+
+/* Pub cards inside highlights (override white-only colors) */
+.highlights .pub-card{
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(15,23,42,.10);
+}
+.dark .highlights .pub-card{
+  background: rgba(2,6,23,.66);
+  border-color: rgba(255,255,255,.12);
+}
+.highlights .pub-card .pub-label{
+  color:#0f172a;
+  background: rgba(15,23,42,.06);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.dark .highlights .pub-card .pub-label{
+  color:rgba(255,255,255,.9);
+  background: rgba(255,255,255,.08);
+}
+.highlights .pub-card .pub-title{ color:#0f172a; }
+.dark .highlights .pub-card .pub-title{ color:#fff; }
+.highlights .pub-card .pub-meta{ color:#64748b; }    /* slate-500/600 */
+.dark .highlights .pub-card .pub-meta{ color:rgba(255,255,255,.75); }
+.highlights .pub-card .pub-authors{ color:#334155; } /* slate-700 */
+.dark .highlights .pub-card .pub-authors{ color:rgba(255,255,255,.85); }
+.highlights .pub-card .pub-summary{ color:#1f2937; } /* slate-800 */
+.dark .highlights .pub-card .pub-summary{ color:rgba(255,255,255,.92); }
+
+/* News cards inside highlights */
+.highlights .news-card{
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(15,23,42,.10);
+  border-radius: 16px;
+}
+.dark .highlights .news-card{
+  background: rgba(2,6,23,.66);
+  border-color: rgba(255,255,255,.12);
+}
+.highlights .news-card .news-label{
+  color:#0f172a;
+  background: rgba(15,23,42,.06);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.dark .highlights .news-card .news-label{
+  color:rgba(255,255,255,.9);
+  background: rgba(255,255,255,.08);
+}
+.highlights .news-card h4{ color:#0f172a; }
+.dark .highlights .news-card h4{ color:#fff; }
+.highlights .news-card .news-summary{ color:#1f2937; }
+.dark .highlights .news-card .news-summary{ color:rgba(255,255,255,.9); }
+
+/* Featured video box keeps the same layout; just neutral text */
+.highlights .video-wrap{ border-radius:14px; box-shadow:0 20px 50px rgba(0,0,0,.12); }
+
+#highlights[class*="bg-gradient-to-"]{
+  background-image: none !important;
+  background-color: rgba(255,255,255,.80) !important;
+}
+.dark #highlights[class*="bg-gradient-to-"]{
+  background-color: rgba(2,6,23,.60) !important; /* ~slate-900/60 */
+}
   
 </style>
-
-<script>
-  (function () {
-    var loc = window.location.href.split('#')[0];
-    var c = document.querySelector('link[rel="canonical"]');
-    if (c) c.setAttribute('href', loc);
-    var og = document.querySelector('meta[property="og:url"]');
-    if (og) og.setAttribute('content', loc);
-  })();
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sina Golara",
+    "jobTitle": "Assistant Professor of Supply Chain Management",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "Georgia State University" },
+    "url": "https://your-domain.example/", 
+    "sameAs": [
+      "https://www.linkedin.com/in/sinagolara/",
+      "https://x.com/GolaraSina"
+    ]
+  }
   </script>
 
-<script>
-  (function () {
-    // Default to LIGHT if no saved choice
-    const saved = localStorage.getItem('theme');
-    const dark = saved ? saved === 'dark' : false;
-    if (dark) document.documentElement.classList.add('dark');
-  })();
-</script>
+<meta name="author" content="Sina Golara" />
+<meta name="twitter:creator" content="@GolaraSina" />
 
 </head>
 
@@ -433,7 +415,7 @@
         <div>
           <h3 class="font-semibold mb-3">Contact</h3>
           <p class="text-sm text-white/80">
-            Assistant Professor of Supply Chain Management<br />
+            Assistant Professor of Supply Chain Management<br/>
             J. Mack Robinson College of Business<br />
             Georgia State University
           </p>
@@ -468,6 +450,8 @@
                 <path d="M4.98 3.5c0 1.38-1.11 2.5-2.48 2.5S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v13H0zM8 8h4.6v1.9h.1c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.4 3 5.4 6.8V21h-5v-5.1c0-1.2-.02-2.9-1.8-2.9-1.8 0-2.1 1.3-2.1 2.8V21H8z"/>
               </svg>
             </a>
+            <a id="ig" target="_blank" ></a>
+            
             <a id="x" class="w-10 h-10 grid place-items-center rounded-xl border border-white/20 hover:bg-white/10" target="_blank" aria-label="X">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-white">
                 <path d="M18.244 2H21l-6.5 7.43L22 22h-6.766l-4.7-6.14L4.8 22H2l7.07-8.08L2 2h6.85l4.3 5.77L18.244 2zM8.3 3.5H4.7l11.04 15h3.6L8.3 3.5z"/>
@@ -496,8 +480,11 @@
         <p class="mb-4">Prior to joining Georgia State University in 2023, Dr. Golara held academic appointments at Kennesaw State University and a postdoctoral position at the MIT Center for Transportation and Logistics. His industry and consulting experience includes work with Walmart Global eCommerce, Flexe, Inc., and Chemonics Connexi, where he advised on last-mile delivery, shared warehousing, and data analytics strategies.</p>
         <p>Beyond academia, Dr. Golara frequently provides expert commentary on supply chain and trade issues in major outlets such as The New York Times, Politico, NPR, Fox 5 Atlanta, and the Atlanta Journal-Constitution, where his insights on tariffs, logistics disruptions, and industry transformations have reached broad audiences.</p>
       `,
-      socials: {linkedinUrl: "https://www.linkedin.com/in/sinagolara/", xUrl: "https://x.com/GolaraSina" },
-      googleFormUrl: "mailto:sgolara@gsu.edu?subject=Inquiry%20from%20the%20website&body=Hi%20Dr.%20Golara%2C%0D%0A%0D%0A—%20Name%3A%0D%0A—%20Affiliation%3A%0D%0A—%20Topic%3A%0D%0A%0D%0AThanks%2C%0D%0A"
+      socials: {
+                  linkedinUrl: "https://www.linkedin.com/in/sinagolara/",
+                  xUrl: "https://x.com/GolaraSina"
+                },
+                googleFormUrl: "https://docs.google.com/forms/d/e/FORM_ID/viewform?usp=pp_url&entry.123456789=sgolara@gsu.edu"
     };
 
 /* ======== HOME VIDEOS ======== */
@@ -616,7 +603,7 @@ const researchItems = [
     id: "isr-2025-achievement-goals",
     title: "The Impact of Situational Achievement Goals on Online Learning Behavior",
     authors: "Mousavi, N., Golara, S., & Bockstedt, J.",
-    venue: "Information Systems <br> Research",
+    venue: "Information Systems Research",
     year: 2025,
     abstract: "Field-experiment evidence showing how dynamically activated goals shape content engagement and <br> completion.",
     image: "Images/isr-achievement-goals.png",
@@ -822,198 +809,13 @@ const teaching = {
     ];
 
     const resources = [
-  // ——— Datasets & Dashboards ———
-  {
-    id: 101,
-    title: "FRED — Federal Reserve Economic Data",
-    type: "Dataset",
-    description: "Macro indicators (rates, employment, prices) for context in retail & supply chain analyses.",
-    url: "https://fred.stlouisfed.org/"
-  },
-  {
-    id: 102,
-    title: "U.S. Census — Monthly Retail Trade (MRTS)",
-    type: "Dataset",
-    description: "Sales by retail subsector; handy for omnichannel & inventory availability work.",
-    url: "https://www.census.gov/retail/index.html"
-  },
-  {
-    id: 103,
-    title: "Bureau of Transportation Statistics (BTS)",
-    type: "Dataset",
-    description: "Freight flows, port performance, and transportation services indices.",
-    url: "https://www.bts.gov/"
-  },
-  {
-    id: 104,
-    title: "Georgia Ports Authority",
-    type: "Dashboard",
-    description: "Operational updates & trade volumes relevant to Southeast auto flows (Ro/Ro).",
-    url: "https://gaports.com/"
-  },
-  {
-    id: 105,
-    title: "Freightos Baltic Index (FBX)",
-    type: "Dashboard",
-    description: "Container spot rates—useful for shocks, tariffs, and logistics cost dynamics.",
-    url: "https://fbx.freightos.com/"
-  },
-  {
-    id: 106,
-    title: "Cass Freight Index",
-    type: "Dashboard",
-    description: "U.S. shipment & expenditure benchmarks (demand signal for freight/retail).",
-    url: "https://www.cassinfo.com/transportation-indexes"
-  },
-  {
-    id: 107,
-    title: "BLS Producer Price Index (PPI)",
-    type: "Dataset",
-    description: "Input price pressures across manufacturing & distribution.",
-    url: "https://www.bls.gov/ppi/"
-  },
-  {
-    id: 108,
-    title: "EIA — Gasoline & Diesel Prices",
-    type: "Dataset",
-    description: "Fuel price trackers—key for delivery, dealer logistics, and last-mile costs.",
-    url: "https://www.eia.gov/petroleum/gasdiesel/"
-  },
-
-  // ——— Industry & Policy ———
-  {
-    id: 201,
-    title: "USITC — Harmonized Tariff Schedule (HTS)",
-    type: "Policy",
-    description: "Authoritative tariff classifications and changes—baseline for trade impact work.",
-    url: "https://hts.usitc.gov/"
-  },
-  {
-    id: 202,
-    title: "Office of the U.S. Trade Representative (USTR)",
-    type: "Policy",
-    description: "Tariff actions, Section 301 reviews, and trade policy updates.",
-    url: "https://ustr.gov/"
-  },
-  {
-    id: 203,
-    title: "WTO — Statistics Database",
-    type: "Policy",
-    description: "Global trade, tariff, and services data for cross-country comparisons.",
-    url: "https://stats.wto.org/"
-  },
-  {
-    id: 204,
-    title: "Cox Automotive — Industry Insights",
-    type: "Industry",
-    description: "Auto retail trends, Manheim used-vehicle value signals, and dealer analytics.",
-    url: "https://www.coxautoinc.com/insights/"
-  },
-  {
-    id: 205,
-    title: "J.D. Power — Auto Market Intelligence",
-    type: "Industry",
-    description: "Demand signals, inventory health, and consumer behavior in automotive.",
-    url: "https://www.jdpower.com/business"
-  },
-  {
-    id: 206,
-    title: "NADA — Auto Retail Data",
-    type: "Industry",
-    description: "Dealership counts, employment, and financial benchmarking for U.S. auto retail.",
-    url: "https://www.nada.org/"
-  },
-
-  // ——— Journals (FT-50 and field) ———
-  {
-    id: 301,
-    title: "Information Systems Research (ISR)",
-    type: "Journal",
-    description: "IS & digital platforms—aligned with online learning and platform research.",
-    url: "https://pubsonline.informs.org/journal/isre"
-  },
-  {
-    id: 302,
-    title: "Production and Operations Management (POM)",
-    type: "Journal",
-    description: "Core outlet for operations, retail, and service management research.",
-    url: "https://onlinelibrary.wiley.com/journal/19375956"
-  },
-  {
-    id: 303,
-    title: "Management Science",
-    type: "Journal",
-    description: "Broad management science with strong empirical & analytical work.",
-    url: "https://pubsonline.informs.org/journal/mnsc"
-  },
-  {
-    id: 304,
-    title: "Manufacturing & Service Operations Management (M&SOM)",
-    type: "Journal",
-    description: "MS/OM methods, queueing, assortment, and service ops—tight fit with lab themes.",
-    url: "https://pubsonline.informs.org/journal/msom"
-  },
-  {
-    id: 305,
-    title: "Journal of Operations Management (JOM)",
-    type: "Journal",
-    description: "Empirical OM with strategy and organizational angles.",
-    url: "https://www.sciencedirect.com/journal/journal-of-operations-management"
-  },
-  {
-    id: 306,
-    title: "Journal of Purchasing & Supply Management (JPSM)",
-    type: "Journal",
-    description: "Purchasing, supplier sustainability, and network structure (matches Golara’s work).",
-    url: "https://www.sciencedirect.com/journal/journal-of-purchasing-and-supply-management"
-  },
-
-  // ——— Teaching & Methods ———
-  {
-    id: 401,
-    title: "MIT CTL — MicroMasters in Supply Chain (SCx)",
-    type: "Course",
-    description: "SC1x/SC2x foundations—ties to Golara’s MIT CTL teaching contributions.",
-    url: "https://micromasters.mit.edu/scm/"
-  },
-  {
-    id: 402,
-    title: "MIT Center for Transportation & Logistics (CTL)",
-    type: "Center",
-    description: "Research, case studies, and supply chain teaching materials.",
-    url: "https://ctl.mit.edu/"
-  },
-  {
-    id: 403,
-    title: "Causal Inference: The Mixtape (Cunningham)",
-    type: "Book",
-    description: "Modern, practical causal inference with code—great for field experiments & diff-in-diff.",
-    url: "https://mixtape.scunning.com/"
-  },
-  {
-    id: 404,
-    title: "The Goal (Goldratt) — Theory of Constraints",
-    type: "Book",
-    description: "Classic operations narrative on bottlenecks, flow, and throughput.",
-    url: "https://en.wikipedia.org/wiki/The_Goal_(novel)"
-  },
-
-  // ——— Tools (used in courses & lab workflows) ———
-  {
-    id: 501,
-    title: "Tableau",
-    type: "Tool",
-    description: "Rapid dashboards for executive storytelling and class projects.",
-    url: "https://www.tableau.com/"
-  },
-  {
-    id: 502,
-    title: "Microsoft Power BI",
-    type: "Tool",
-    description: "Enterprise-friendly BI for supply-chain analytics & lab demos.",
-    url: "https://powerbi.microsoft.com/"
-  }
-];
+      { id: 1, title: "Journal of Marketing", type: "Journal", description: "Leading journal on marketing theory & practice.", url: "#" },
+      { id: 2, title: "Management Science", type: "Journal", description: "Research across management disciplines.", url: "#" },
+      { id: 3, title: "Supply Chain Management Review", type: "Publication", description: "Industry publication for SCM pros.", url: "#" },
+      { id: 4, title: "Harvard Business Review", type: "Publication", description: "Influential management ideas.", url: "#" },
+      { id: 5, title: "Tableau", type: "Tool", description: "Data visualization for research.", url: "#" },
+      { id: 6, title: "The Goal — E. Goldratt", type: "Reading", description: "Classic on Theory of Constraints.", url: "#" }
+    ];
 
     const labProjects = [
       { id: 1, title: "EV Battery Supply Chain Traceability", abstract: "Blockchain-based traceability for EV batteries from sourcing to recycling.", collaborators: ["Student A","Industry Partner X"], status: "In Progress", tags: ["EVs","Blockchain"] },
@@ -1029,7 +831,7 @@ const teaching = {
     ];
 
       // ---------- HIGHLIGHTS DATA ----------
-      const newsHighlights = [
+  const newsHighlights = [
   {
     outlet: "The New York Times",
     date: "Mar 26, 2024",
@@ -1148,150 +950,126 @@ const videoHighlights = [
 
     // ---------- TEMPLATES ----------
     const homePage = `
-      <section class="rounded-3xl p-6 md:p-10 bg-aurora dark:bg-aurora-dark shadow-glass relative overflow-hidden">
-        <div class="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-gold/20 blur-3xl"></div>
-        <div class="absolute -bottom-24 -right-24 w-[420px] h-[420px] rounded-full bg-brand/20 blur-3xl"></div>
+<section class="rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700
+                bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl shadow-glow relative overflow-hidden">
+  <div class="grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
+    <div class="reveal">
+      <h1 class="mt-3 text-4xl md:text-5xl font-bold leading-tight">
+        Welcome to Dr. Sina Golara’s Website
+      </h1>
+      <p class="mt-3 text-lg text-slate-700 dark:text-slate-300">
+        Supply Chain and Operations Management Research & Teaching
+      </p>
 
-        <div class="grid md:grid-cols-2 gap-10 items-center relative z-10">
-          <div class="reveal">
-            <h1 class="mt-3 text-4xl md:text-5xl font-bold leading-tight">Welcome to  <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand to-gold">Dr. Sina Golara’s</span> Website</h1>
-            <p class="mt-3 text-lg text-slate-700 dark:text-slate-300">Supply Chain  and Operations Management Research & Teaching</p>
+      <div class="mt-7 flex flex-wrap items-center gap-4">
+        <a href="#research"
+           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-brand text-white font-semibold shadow-glow
+                  hover:bg-brandDark focus:outline-none focus-visible:ring-2 focus-visible:ring-brand">
+          Explore Research
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
 
-            <div class="mt-7 flex flex-wrap items-center gap-4">
-              <a href="#research" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-brand text-white font-semibold shadow-glow hover:bg-brandDark">Explore Research
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-              </a>
-              <a href="https://robinson.gsu.edu/profile/sina-golara/" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-600 font-semibold hover:bg-white/60 dark:hover:bg-slate-800/60">Academic Profile</a>
-            </div>
-           
-          </div>
-
-          <div class="reveal">
-            <div class="relative rounded-3xl shadow-glow overflow-hidden border border-slate-200 dark:border-slate-700">
-              <img
-                src="Images/hero-supply-chain.png"  
-                alt="Modern supply chain network with logistics, robotics and data visualization"
-                class="w-full h-full object-cover"
-                loading="eager"
-                decoding="async"
-              />
-              <div class="absolute bottom-4 left-4 bg-black/55 text-white text-sm px-3 py-1.5 rounded-lg backdrop-blur-sm">
-                Innovation in Supply Chain Management
-              </div>
-              </div>
-              </div>
-          </div>
-      </section>
-
-     <section class="mt-14 reveal rounded-3xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl shadow-glow overflow-hidden">
-  <div class="grid md:[grid-template-columns:440px_1fr] lg:[grid-template-columns:540px_1fr]">
-    <!-- Left: Headshot fills the card height on md+; stacks on mobile -->
-    <figure class="relative max-md:aspect-[4/5] md:h-full">
-      <img
-        src="${professor.headshotUrl}"
-        alt="Headshot of ${professor.name}"
-        class="w-full h-full object-cover object-top"
-      />
-      <figcaption class="absolute bottom-3 left-3 text-[11px] md:text-xs bg-black/55 text-white px-2 py-1 rounded-lg">
-        Headshot — ${professor.name}
-      </figcaption>
-    </figure>
-
-    <!-- Right: Bio content -->
-    <div class="p-6 md:p-8 flex flex-col">
-      <h2 class="text-2xl md:text-3xl font-bold text-brand">About Sina</h2>
-      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">GSU • J. Mack Robinson College of Business</p>
-
-      <!-- Two-column flowing text on large screens -->
-      <div class="mt-4 lg:columns-2 lg:gap-10 leading-relaxed grow">
-        ${professor.shortBio}
-      </div>
-
-      <!-- CTA pinned toward the bottom for a tidy edge -->
-      <div class="mt-6">
-        <a
-          href="https://robinson.gsu.edu/profile/sina-golara/"
-          target="_blank"
-          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-gold to-amber-300 text-slate-900 font-semibold shadow-glow hover:opacity-95"
-        >
-          GSU Academic Profile
+        <a href="https://robinson.gsu.edu/profile/sina-golara/" target="_blank" rel="noreferrer"
+           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-300 dark:border-slate-600
+                  bg-white/70 dark:bg-slate-900/50 font-semibold hover:bg-white/90 dark:hover:bg-slate-800/60
+                  focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 dark:focus-visible:ring-slate-700">
+          Academic Profile
         </a>
       </div>
+    </div>
+
+    <figure class="reveal">
+      <div class="relative rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-glow">
+        <img
+          src="Images/hero-supply-chain.png"
+          alt="Atlanta skyline — evening cityscape"
+          class="w-full h-full object-cover md:aspect-[16/10]"
+          loading="eager" decoding="async"
+        />
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS (neutral, no gradients) -->
+<section
+  id="highlights"
+  aria-labelledby="highlights-title"
+  class="highlights mt-16 rounded-3xl border border-slate-200 dark:border-slate-700
+         bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl
+         p-8 md:p-10 shadow-glow text-slate-900 dark:text-slate-100">
+
+  <div class="relative z-10 space-y-10">
+    <h2 id="highlights-title" class="section-title text-3xl font-bold text-center">
+      Highlights
+    </h2>
+
+    <!-- Publications -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Publications</h3>
+      <div class="pub-grid">
+        ${pubHighlights.map(p => `
+          <article class="pub-card">
+            <div class="pub-label">${p.journal ?? ""}</div>
+            <div class="pub-media">
+              <img src="${p.image}" alt="${p.journal ?? 'Journal'} — ${p.title}">
+            </div>
+            <div class="pub-body">
+              ${p.date ? `<div class="pub-meta">${p.date}</div>` : ``}
+              <h4 class="pub-title">${p.title}</h4>
+              ${p.authors ? `<div class="pub-authors">${p.authors}</div>` : ``}
+              ${p.summary ? `<p class="pub-summary">${p.summary}</p>` : ``}
+            </div>
+            <a class="pub-cta" href="${p.url}" target="_blank" rel="noreferrer">
+              ${p.cta ?? "VIEW PAPER"}
+            </a>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- News -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-slate-900 dark:text-white">News</h3>
+      <div class="news-grid">
+        ${newsHighlights.map(n => `
+          <div class="news-card">
+            <div class="news-label">${n.outlet}</div>
+            <img src="${n.image}" alt="${n.outlet} — ${n.title}" loading="lazy">
+            <div class="p-5 pt-3">
+              <div class="text-slate-500 dark:text-white/70 text-xs text-center">${n.date}</div>
+              <h4 class="mt-1 text-2xl font-semibold leading-snug text-center">
+                ${n.title}
+              </h4>
+              <p class="news-summary text-center">${n.summary}</p>
+              <div class="text-center">
+                <a class="news-cta" href="${n.url}" target="_blank" rel="noreferrer">READ ARTICLE</a>
+              </div>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    </div>
+
+    <!-- Featured Video -->
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Featured Video</h3>
+      <div class="video-wrap shadow-glow">
+        <iframe
+          src="${videoHighlights[0].youtubeUrl}"
+          title="${videoHighlights[0].title}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="mt-2 text-slate-600 dark:text-slate-300 text-sm">
+        ${videoHighlights[0].title}
+      </p>
     </div>
   </div>
 </section>
 
-       <section class="mt-16 relative overflow-hidden rounded-3xl text-white p-8 md:p-10 shadow-glow bg-gradient-to-br from-[#0b1f3a] via-[#163a63] to-[#0d6d7e]">
-  <!-- soft accents + subtle mesh, same as before -->
-  <div class="pointer-events-none absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-[#FFD233]/25 blur-3xl"></div>
-  <div class="pointer-events-none absolute -bottom-28 -right-16 w-[34rem] h-[34rem] rounded-full bg-cyan-300/20 blur-3xl"></div>
-  <div class="pointer-events-none absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_1px_1px,_white_1px,_transparent_1px)] [background-size:20px_20px]"></div>
-
- <div class="relative z-10 space-y-10">
-  <h2 class="text-3xl font-bold text-center">Highlights</h2>
-
-  <!-- Publications (card grid, aligned + diagonal) -->
-  <div>
-    <h3 class="text-xl font-semibold mb-4">Publications</h3>
-    <div class="pub-grid">
-      ${pubHighlights.map(p => `
-        <article class="pub-card">
-          <div class="pub-label">${p.journal ?? ""}</div>
-          <div class="pub-media">
-            <img src="${p.image}" alt="${p.journal ?? 'Journal'} — ${p.title}">
-          </div>
-          <div class="pub-body">
-            ${p.date ? `<div class="pub-meta">${p.date}</div>` : ``}
-            <h4 class="pub-title">${p.title}</h4>
-            ${p.authors ? `<div class="pub-authors">${p.authors}</div>` : ``}
-            ${p.summary ? `<p class="pub-summary">${p.summary}</p>` : ``}
-          </div>
-          <a class="pub-cta" href="${p.url}" target="_blank" rel="noreferrer">
-            ${p.cta ?? "VIEW PAPER"}
-          </a>
-        </article>
-      `).join('')}
-    </div>
-  </div>
-
-  <!-- News -->
-  <div>
-    <h3 class="text-xl font-semibold mb-4">News</h3>
-    <div class="news-grid">
-      ${newsHighlights.map(n => `
-        <div class="news-card">
-          <div class="news-label">${n.outlet}</div>
-          <img src="${n.image}" alt="${n.outlet} — ${n.title}" loading="lazy">
-          <div class="p-5 pt-3">
-            <div class="text-white/70 text-xs text-center">${n.date}</div>
-            <h4 class="mt-1 text-2xl font-semibold leading-snug text-center">
-              ${n.title}
-            </h4>
-            <p class="news-summary">${n.summary}</p>
-            <div class="text-center">
-              <a class="news-cta" href="${n.url}" target="_blank" rel="noreferrer">READ ARTICLE</a>
-            </div>
-          </div>
-        </div>
-      `).join("")}
-    </div>
-  </div>
-
-  <!-- Featured Video -->
-  <div>
-    <h3 class="text-xl font-semibold mb-4">Featured Video</h3>
-    <div class="video-wrap shadow-glow">
-      <iframe
-        src="${videoHighlights[0].youtubeUrl}"
-        title="${videoHighlights[0].title}"
-        loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-    <p class="mt-2 text-white/80 text-sm">${videoHighlights[0].title}</p>
-  </div>
-</div></section>
 
       <section class="mt-16 rounded-3xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-8 shadow-glow text-center">
         <h2 class="text-3xl font-bold">Get in Touch</h2>
@@ -1305,7 +1083,8 @@ const videoHighlights = [
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21l-6.5 7.43L22 22h-6.766l-4.7-6.14L4.8 22H2l7.07-8.08L2 2h6.85l4.3 5.77L18.244 2zM8.3 3.5H4.7l11.04 15h3.6L8.3 3.5z"/></svg>
           </a>
         </div>
-        <button id="contactBtn" class="inline-flex mt-6 items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold to-amber-300 text-slate-900 font-semibold shadow-glow">Contact Form</button>       </section>
+        <a href="${professor.googleFormUrl}" target="_blank" class="inline-flex mt-6 items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-gold to-amber-300 text-slate-900 font-semibold shadow-glow">Contact Form</a>
+      </section>
     `;
 
     const researchPage = `
@@ -1365,19 +1144,6 @@ const teachingPage = `
     Courses taught across GSU, KSU, MIT CTL/MITx, and ASU; plus advising on graduate capstones.
   </p>
 
-  <!-- Filters -->
-  <section class="mt-8 flex flex-wrap gap-3 justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
-    <label class="font-semibold">Institution:</label>
-    <select id="teach-inst" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></select>
-
-    <label class="font-semibold">Level:</label>
-    <select id="teach-level" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
-      <option value="all" selected>All</option>
-      <option value="Undergrad">Undergrad</option>
-      <option value="Graduate">Graduate</option>
-    </select>
-  </section>
-
   <!-- Courses -->
   <section class="mt-8 rounded-3xl p-6 md:p-7 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
     <div class="flex items-center justify-between gap-4">
@@ -1421,8 +1187,6 @@ const teachingPage = `
   <section class="mt-8 relative overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-glow
                   bg-gradient-to-br from-[#0b1f3a] via-[#163a63] to-[#0d6d7e]">
     <!-- ambient accents -->
-    <div class="pointer-events-none absolute -top-24 -left-24 w-[30rem] h-[30rem] rounded-full bg-[#FFD233]/25 blur-3xl"></div>
-    <div class="pointer-events-none absolute -bottom-28 -right-16 w-[36rem] h-[36rem] rounded-full bg-cyan-300/20 blur-3xl"></div>
 
     <div class="relative z-10 grid md:grid-cols-[1.65fr_.35fr] gap-6 items-stretch">
       <!-- Poster: wider emphasis + richer overlay -->
@@ -1550,7 +1314,20 @@ const teachingPage = `
     </div>
   </section>
 `;
-
+    const resourcesPage = `
+      <h1 class="text-4xl md:text-5xl font-bold text-center">Resources</h1>
+      <p class="mt-3 text-center text-slate-600 dark:text-slate-400">Curated journals, publications, tools & reading lists.</p>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        ${resources.map(r=>`
+          <a href="${r.url}" target="_blank" class="rounded-2xl p-6 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow hover:-translate-y-0.5 transition">
+            <span class="text-xs font-semibold px-2 py-1 rounded-full bg-slate-100 dark:bg-slate-800">${r.type}</span>
+            <h3 class="mt-3 text-lg font-bold">${r.title}</h3>
+            <p class="mt-1 text-slate-600 dark:text-slate-400">${r.description}</p>
+            <div class="mt-3 text-sm font-semibold text-brand">Visit resource →</div>
+          </a>
+        `).join('')}
+      </div>
+    `;
 
     const notFoundPage = `
       <div class="text-center py-24">
@@ -1571,7 +1348,7 @@ const teachingPage = `
     // ---------- RENDERERS ----------
     const main = document.getElementById('main');
 
-  function renderResearch(){
+    function renderResearch(){
   main.innerHTML = researchPage;
 
   const tagFilter = document.getElementById('tag-filter');
@@ -1604,7 +1381,7 @@ const card = (i) => {
   return `
     <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-glow transition-transform hover:-translate-y-1">
       <!-- Journal header -->
-      <div class="pub-label">
+      <div class="bg-amber-100/80 dark:bg-amber-200/15 text-brand dark:text-amber-200 uppercase tracking-[.22em] text-center text-xs font-extrabold py-4 border-b border-amber-300/60">
         ${i.venue}
       </div>
 
@@ -1693,33 +1470,64 @@ function draw(){
 function renderTeaching(){
   main.innerHTML = teachingPage;
 
-  const instSel  = document.getElementById('teach-inst');
-  const lvlSel   = document.getElementById('teach-level');
-  const grid     = document.getElementById('teach-grid');
-  const countEl  = document.getElementById('teach-count');
-  const advising = document.getElementById('advising-list');
+  const grid    = document.getElementById('teach-grid');
+  const countEl = document.getElementById('teach-count');
+  const advisingEl = document.getElementById('advising-list');
 
-  // Build institution list
-  const institutions = Array.from(new Set(teaching.courses.map(c => c.institution)));
-  instSel.innerHTML = `<option value="all" selected>All</option>` + institutions.map(i => `<option>${i}</option>`).join('');
+  // ---- helpers ----
+  const parseYears = (str="") => {
+    const cleaned = str.toLowerCase().replace(/[–—]/g, "-").trim();
+    const [a,b] = cleaned.split("-").map(s=>s.trim());
+    const start = parseInt(a,10) || -Infinity;
+    const end   = b ? (b.includes("present") ? 9999 : (parseInt(b,10) || start)) : start;
+    return { start, end };
+  };
+  const byRecency = (x,y) => {
+    const A = parseYears(x.years), B = parseYears(y.years);
+    return (B.end - A.end) || (B.start - A.start) || x.title.localeCompare(y.title);
+  };
 
-  // Card template (brand-matched)
-  const card = (c) => `
-    <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-glow transition hover:-translate-y-0.5">
-      <div class="bg-amber-100/80 dark:bg-amber-200/15 text-brand dark:text-amber-200 uppercase tracking-[.20em] text-center text-xs font-extrabold py-3 border-b border-amber-300/60">
-        ${c.institution}
+  const courseRow = (c) => `
+  <li class="px-3.5 py-3 md:px-4 md:py-3.5 flex items-center justify-between gap-3">
+    <h3 class="text-[1.05rem] md:text-[1.1rem] font-extrabold text-slate-900 leading-tight">
+      ${c.code}: ${c.title}
+    </h3>
+    <span class="shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11.5px] font-semibold">
+      ${c.years}
+    </span>
+  </li>
+`;
+
+  // WHITE header; no yellow; no separators between rows
+  const instCard = (inst, courses) => `
+    <section class="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-glow">
+      <div class="bg-white text-slate-600 uppercase tracking-[.14em] text-center px-4 text-xs font-extrabold py-3 border-b border-slate-200">
+        ${inst}
       </div>
-      <div class="p-4">
-        <div class="flex items-start justify-between gap-3">
-          <h3 class="text-lg font-bold text-brand">${c.code}: ${c.title}</h3>
-          <span class="shrink-0 text-[11px] px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800">${c.level}</span>
-        </div>
-        <p class="mt-1 text-sm text-slate-500 dark:text-slate-400"> ${c.years}</p>
-      </div>
-    </div>
+      <ul class="space-y-1">
+        ${courses.map(courseRow).join('')}
+      </ul>
+    </section>
   `;
 
-  // Advising item
+  const groupByInst = (list) =>
+    list.reduce((acc, c) => { (acc[c.institution] ||= []).push(c); return acc; }, {});
+
+  // group and order institutions by their most recent course
+  const groups = Object.entries(groupByInst(teaching.courses));
+  groups.sort(([,A], [,B]) => {
+    const maxA = Math.max(...A.map(c => parseYears(c.years).end));
+    const maxB = Math.max(...B.map(c => parseYears(c.years).end));
+    return maxB - maxA; // newest institution section first
+  });
+
+  grid.className = "mt-6 grid md:grid-cols-1 gap-6";
+  grid.innerHTML = groups.map(([inst, courses]) => instCard(inst, courses)).join('');
+
+  // count
+  countEl.textContent = `${teaching.courses.length} course${teaching.courses.length===1?'':'s'}`;
+
+  // Advising (unchanged)
   const advisingItem = (a) => `
     <li class="rounded-xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50">
       <div class="flex items-center justify-between">
@@ -1727,51 +1535,12 @@ function renderTeaching(){
         <span class="text-xs text-slate-500 dark:text-slate-400">${a.years}</span>
       </div>
       <div class="mt-1 text-[15px] font-medium">${a.title}</div>
-      <div class="text-sm text-slate-600 dark:text-slate-400">${a.role}</div>
-    </li>
-  `;
-
-  // Parse "2019–2023", "2023–present", "2017-2018" → {start, end}
-  const getYearRange = (yearsStr) => {
-    if (!yearsStr) return { start: -Infinity, end: -Infinity };
-    const cleaned = yearsStr.toString().toLowerCase().replace(/[–—-]/g, '-').trim();
-    const [startStr, endStr] = cleaned.split('-').map(s => s.trim());
-    const start = parseInt(startStr, 10);
-    const end = (!endStr || endStr.includes('present')) ? 9999 : parseInt(endStr, 10);
-    return {
-      start: isNaN(start) ? -Infinity : start,
-      end: isNaN(end) ? (isNaN(start) ? -Infinity : start) : end
-    };
-  };
-
-  function draw(){
-    const inst = instSel.value;
-    const lvl  = lvlSel.value;
-
-    let list = teaching.courses.slice();
-    if(inst !== 'all') list = list.filter(c => c.institution === inst);
-    if(lvl  !== 'all') list = list.filter(c => c.level === lvl);
-
-    // Order by institution, then years desc
-    list.sort((a, b) => {
-      const A = getYearRange(a.years);
-      const B = getYearRange(b.years);
-      return (B.end - A.end) || (B.start - A.start) || a.title.localeCompare(b.title);
-    });
-
-    grid.innerHTML = list.map(card).join('');
-    countEl.textContent = `${list.length} course${list.length===1?'':'s'}`;
-
-    advising.innerHTML = teaching.advising.map(advisingItem).join('');
-  }
-
-  instSel.addEventListener('change', draw);
-  lvlSel.addEventListener('change', draw);
-  draw();
+      <div class="text-sm text-slate-600 dark:text-slate-300">${a.role}</div>
+    </li>`;
+  advisingEl.innerHTML = teaching.advising.map(advisingItem).join('');
 }
 
-function renderMedia()
-{
+function renderMedia(){
   main.innerHTML = mediaPage;
 
   const typeSel = document.getElementById('media-type-filter');
@@ -1814,12 +1583,12 @@ function renderMedia()
     if(tt==='interview') return 'bg-emerald-500/90 text-white';
     return 'bg-white/90 text-slate-900 dark:bg-black/60 dark:text-white/90';
   };
-  
+
   // Pretty date (e.g., "Mar 26, 2024"); falls back to original if not ISO
-  const prettyDate = (d) => {
-    const dt = new Date(d);
-    return isNaN(dt) ? (d || "") : dt.toLocaleDateString(undefined, { month: "short", day: "2-digit", year: "numeric" });
-  };
+const prettyDate = (d) => {
+  const dt = new Date(d);
+  return isNaN(dt) ? (d || "") : dt.toLocaleDateString(undefined, { month: "short", day: "2-digit", year: "numeric" });
+};
 
 // Round icon button matching the item type
 const typeGlyph = (t = "Article") => {
@@ -1868,7 +1637,7 @@ const card = (m) => `
           <span class="text-[11px] text-slate-600/90 dark:text-white/70 whitespace-nowrap">
             • ${prettyDate(m.date)}
           </span>
-        </div> 
+        </div>
 
         <!-- type glyph on the right (play/mic/headphones/doc) -->
         <div class="shrink-0 ml-3">${typeGlyph(m.type)}</div>
@@ -1902,243 +1671,6 @@ const card = (m) => `
   draw();
 }
 
-function renderResources(){
-  document.title = `Resources | ${professor.name} Portfolio`;
-
-  // ---- meta for types (icon + colors) ----
-  const typeMeta = {
-    dataset:  { label: "Dataset",  chip: "bg-sky-50 text-sky-800 border-sky-200 dark:bg-sky-900/20 dark:text-sky-200 dark:border-sky-800",  icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3c-4.97 0-9 1.79-9 4v10c0 2.21 4.03 4 9 4s9-1.79 9-4V7c0-2.21-4.03-4-9-4zm0 2c3.87 0 7 .9 7 2s-3.13 2-7 2-7-.9-7-2 .13-2 7-2zm0 12c-3.87 0-7-.9-7-2V9c1.66 1.07 4.72 1.75 7 1.75S17.34 10.07 19 9v6c0 1.1-3.13 2-7 2z"/></svg>` },
-    dashboard:{ label: "Dashboard",chip: "bg-emerald-50 text-emerald-800 border-emerald-200 dark:bg-emerald-900/20 dark:text-emerald-200 dark:border-emerald-800",icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M3 3h8v8H3V3zm10 0h8v5h-8V3zM3 13h5v8H3v-8zm7 0h11v8H10v-8z"/></svg>` },
-    journal:  { label: "Journal",  chip: "bg-indigo-50 text-indigo-800 border-indigo-200 dark:bg-indigo-900/20 dark:text-indigo-200 dark:border-indigo-800",  icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 2h11a2 2 0 0 1 2 2v15a3 3 0 0 1-3 3H6a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a1 1 0 0 0 1-1V4H6z"/></svg>` },
-    industry: { label: "Industry", chip: "bg-amber-50 text-amber-900 border-amber-200 dark:bg-amber-900/20 dark:text-amber-200 dark:border-amber-800", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2 21h20v-2H2v2zm2-4h16V3l-6 5V3l-6 5V3H4v14z"/></svg>` },
-    policy:   { label: "Policy",   chip: "bg-rose-50 text-rose-800 border-rose-200 dark:bg-rose-900/20 dark:text-rose-200 dark:border-rose-800",    icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm9 1.5V8h4.5"/></svg>` },
-    course:   { label: "Course",   chip: "bg-fuchsia-50 text-fuchsia-800 border-fuchsia-200 dark:bg-fuchsia-900/20 dark:text-fuchsia-200 dark:border-fuchsia-800", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.18 12.4L12 17l8.82-4.6L12 7.8 3.18 12.4z"/></svg>` },
-    center:   { label: "Center",   chip: "bg-cyan-50 text-cyan-800 border-cyan-200 dark:bg-cyan-900/20 dark:text-cyan-200 dark:border-cyan-800",   icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7zm0-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>` },
-    book:     { label: "Book",     chip: "bg-stone-50 text-stone-800 border-stone-200 dark:bg-stone-900/20 dark:text-stone-200 dark:border-stone-800", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4 4h13a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4zm3 2v11h11V7a1 1 0 0 0-1-1H7z"/></svg>` },
-    tool:     { label: "Tool",     chip: "bg-teal-50 text-teal-800 border-teal-200 dark:bg-teal-900/20 dark:text-teal-200 dark:border-teal-800",     icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7 14l-5 5 3 3 5-5-3-3zm13.7-9.3a4 4 0 0 0-6.4 1.5l-8 8L9.8 18l8-8a4 4 0 0 0 1.5-6.3z"/></svg>` },
-  };
-
-  // desired order across the grid
-  const TYPE_ORDER = ["Dataset","Dashboard","Journal","Industry","Policy","Course","Center","Book","Tool"];
-
-  // helpers
-  const hostFromUrl = (u) => {
-    try { return new URL(u).hostname.replace(/^www\./,''); } catch { return ""; }
-  };
-  const metaFor = (t) => typeMeta[(t||"").toLowerCase()] || { chip:"bg-slate-100 text-slate-800 border-slate-200 dark:bg-slate-800/40 dark:text-slate-200 dark:border-slate-700", label:t||"Resource", icon:"" };
-
-  const allTypes = Array.from(new Set(resources.map(r => r.type))).sort((a,b)=> TYPE_ORDER.indexOf(a) - TYPE_ORDER.indexOf(b));
-  let activeTypes = new Set(allTypes);     // default: show all
-  let viewDensity = "comfy";               // "comfy" | "compact"
-  let sortMode    = "type";                // "type" | "title"
-  let q           = "";                    // search query
-
-  // UI skeleton
-  const hero = `
-    <section class="reveal relative overflow-hidden rounded-3xl p-7 md:p-9 text-white shadow-glow bg-gradient-to-br from-[#0b1f3a] via-[#163a63] to-[#0d6d7e]">
-      <div class="pointer-events-none absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-[#FFD233]/25 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-28 -right-16 w-[34rem] h-[34rem] rounded-full bg-cyan-300/20 blur-3xl"></div>
-      <div class="relative z-10">
-        <h1 class="text-3xl md:text-4xl font-bold">Resources</h1>
-        <p class="mt-2 text-white/85 max-w-3xl">Curated datasets, dashboards, journals, policy links, and teaching tools used in Dr. Golara’s research, classroom, and the Automotive Retail Lab.</p>
-      </div>
-    </section>
-  `;
-
-  const controls = `
-    <section class="reveal sticky top-16 z-40 mt-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl shadow-glow">
-      <div class="p-4 flex flex-wrap gap-3 items-center">
-        <div class="flex-1 min-w-[220px]">
-          <label class="sr-only" for="res-search">Search</label>
-          <div class="flex items-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="opacity-70"><path d="M10 2a8 8 0 015.29 13.71l4 4-1.42 1.42-4-4A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z"/></svg>
-            <input id="res-search" placeholder="Search title or description…" class="w-full bg-transparent outline-none text-sm" />
-          </div>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <label class="text-xs font-semibold">Preset:</label>
-          <select id="res-preset" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
-            <option value="all">All</option>
-            <option value="students">Students</option>
-            <option value="researchers">Researchers</option>
-            <option value="industry">Industry</option>
-          </select>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <label class="text-xs font-semibold">Sort:</label>
-          <select id="res-sort" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
-            <option value="type">By Type</option>
-            <option value="title">Title A–Z</option>
-          </select>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <label class="text-xs font-semibold">View:</label>
-          <select id="res-density" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm">
-            <option value="comfy">Comfortable</option>
-            <option value="compact">Compact</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- chips -->
-      <div class="px-4 pb-4 flex flex-wrap gap-2" id="res-chipbar"></div>
-    </section>
-  `;
-
-  const groupHeader = (label) => `
-    <div class="news-label mt-8 mx-1 rounded-t-[14px]">${label}</div>
-  `;
-
-  const card = (r) => {
-    const meta = metaFor(r.type);
-    const icon = meta.icon || "";
-    const domain = hostFromUrl(r.url);
-    const density = viewDensity === "compact" ? "p-4" : "p-5";
-    const titleCls = viewDensity === "compact" ? "text-[15px]" : "text-lg";
-    const descCls  = viewDensity === "compact" ? "text-[13px]" : "text-[14px]";
-
-    return `
-      <a href="${r.url}" target="_blank" rel="noreferrer"
-         class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-glow hover:-translate-y-0.5 transition">
-        <div class="${density}">
-          <div class="flex items-center justify-between gap-3">
-            <span class="inline-flex items-center gap-2 px-2.5 py-1 rounded-lg border ${meta.chip}">
-              ${icon}
-              <span class="text-[11px] font-bold uppercase tracking-wide">${r.type}</span>
-            </span>
-            <span class="text-[11px] text-slate-500 dark:text-slate-400">${domain}</span>
-          </div>
-          <h3 class="mt-3 ${titleCls} font-bold text-brand leading-snug group-hover:underline underline-offset-4 decoration-gold/60">
-            ${r.title}
-          </h3>
-          <p class="mt-1 ${descCls} text-slate-600 dark:text-slate-300">${r.description}</p>
-
-          <div class="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-brand">
-            Visit resource
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/><path d="M5 5h5V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-2v5H5V5z"/></svg>
-          </div>
-        </div>
-      </a>
-    `;
-  };
-
-  const drawChips = () => {
-    const el = document.getElementById('res-chipbar');
-    const counts = Object.fromEntries(allTypes.map(t => [t, resources.filter(r => r.type === t).length]));
-    el.innerHTML = allTypes.map(t => {
-      const active = activeTypes.has(t);
-      const meta   = metaFor(t);
-      return `
-        <button data-type="${t}"
-          class="chip inline-flex items-center gap-2 px-3 py-1.5 rounded-xl border ${meta.chip} ${active ? 'ring-2 ring-[var(--ring)]' : ''}"
-          aria-pressed="${active}">
-          <span class="text-xs font-semibold">${t}</span>
-          <span class="text-[10px] opacity-70">${counts[t]}</span>
-        </button>
-      `;
-    }).join('');
-    // handlers
-    el.querySelectorAll('button[data-type]').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        const t = btn.getAttribute('data-type');
-        if(activeTypes.has(t)) activeTypes.delete(t); else activeTypes.add(t);
-        drawChips();
-        drawGrid();
-      });
-    });
-  };
-
-  const filtered = () => {
-    const types = activeTypes;
-    const qlc = q.trim().toLowerCase();
-    return resources.filter(r => types.has(r.type))
-      .filter(r => !qlc || r.title.toLowerCase().includes(qlc) || r.description.toLowerCase().includes(qlc));
-  };
-
-  const grouped = (list) => {
-    const g = {};
-    list.forEach(r=>{
-      (g[r.type] ||= []).push(r);
-    });
-    // sort each group by title
-    Object.values(g).forEach(arr => arr.sort((a,b)=> a.title.localeCompare(b.title)));
-    return g;
-  };
-
-  const drawGrid = () => {
-    const mount = document.getElementById('resources-mount');
-    let list = filtered();
-
-    // top-level sort
-    if(sortMode === 'title'){
-      // simple unified sort
-      list.sort((a,b)=> a.title.localeCompare(b.title));
-      mount.innerHTML = `
-        <div class="mt-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-          ${list.map(card).join('')}
-        </div>
-      `;
-      return;
-    }
-
-    // group by type, in our preferred order
-    const g = grouped(list);
-    const blocks = TYPE_ORDER
-      .filter(t => g[t]?.length)
-      .map(t => `
-        ${groupHeader(t)}
-        <div class="rounded-b-2xl border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md p-5">
-          <div class="${viewDensity==='compact'
-            ? 'grid sm:grid-cols-2 md:grid-cols-3 gap-4'
-            : 'grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'}">
-            ${g[t].map(card).join('')}
-          </div>
-        </div>
-      `).join('');
-
-    mount.innerHTML = blocks || `<p class="mt-8 text-center text-slate-500">No resources match your filters.</p>`;
-  };
-
-  // mount page
-  const page = `
-    ${hero}
-    ${controls}
-    <section id="resources-mount" class="mt-4"></section>
-  `;
-  main.innerHTML = page;
-
-  // wire controls
-  const search = document.getElementById('res-search');
-  const preset = document.getElementById('res-preset');
-  const sort   = document.getElementById('res-sort');
-  const dens   = document.getElementById('res-density');
-
-  search.addEventListener('input', (e)=>{ q = e.target.value || ""; drawGrid(); });
-  sort.addEventListener('change', (e)=>{ sortMode = e.target.value; drawGrid(); });
-  dens.addEventListener('change', (e)=>{ viewDensity = e.target.value; drawGrid(); });
-  preset.addEventListener('change', (e)=>{
-    const v = e.target.value;
-    if(v === 'all'){ activeTypes = new Set(allTypes); }
-    else if(v === 'students'){ activeTypes = new Set(["Course","Dataset","Dashboard","Tool"]); }
-    else if(v === 'researchers'){ activeTypes = new Set(["Journal","Dataset","Policy","Dashboard"]); }
-    else if(v === 'industry'){ activeTypes = new Set(["Industry","Dashboard","Policy","Dataset"]); }
-    drawChips(); drawGrid();
-  });
-
-  // initial paint
-  drawChips();
-  drawGrid();
-
-  // reveal animations
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: .12 });
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-}
-
     // ---------- ROUTER ----------
     const routes = {
       'home':   { template: homePage,  title: `Home | ${professor.name} Portfolio` },
@@ -2146,7 +1678,7 @@ function renderResources(){
       'teaching': { render: renderTeaching, title: `Teaching | ${professor.name} Portfolio` },
       'media':    { render: renderMedia, title: `Media | ${professor.name} Portfolio` },
       'lab':      { template: labPage, title: `Automotive Retail Lab | ${professor.name} Portfolio` },
-      'resources': { render: renderResources, title: `Resources | ${professor.name} Portfolio` },
+      'resources':{ template: resourcesPage, title: `Resources | ${professor.name} Portfolio` },
       '404':      { template: notFoundPage, title: `404 Not Found | ${professor.name} Portfolio` },
     };
 
@@ -2186,9 +1718,8 @@ function renderResources(){
       localStorage.setItem('theme', dark ? 'dark' : 'light');
       if(modeIcon) modeIcon.textContent = dark ? '☀️' : '🌙';
     }
-    const savedTheme = localStorage.getItem('theme');
-    setMode(savedTheme ? savedTheme === 'dark' : false);
-
+    const preferredDark = localStorage.getItem('theme') ? localStorage.getItem('theme')==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setMode(preferredDark);
     modeBtn?.addEventListener('click', ()=> setMode(!html.classList.contains('dark')));
     modeBtnM?.addEventListener('click', ()=> setMode(!html.classList.contains('dark')));
 
@@ -2205,7 +1736,6 @@ function renderResources(){
     document.getElementById('year').textContent = new Date().getFullYear();
     const footerEmail = document.getElementById('footer-email'); if(footerEmail){ footerEmail.textContent = professor.email; footerEmail.href = `mailto:${professor.email}`; }
     const gform = document.getElementById('footer-gform'); if(gform) gform.href = professor.googleFormUrl;
-   //document.getElementById('ig').href = professor.socials.instagramUrl;
     document.getElementById('li').href = professor.socials.linkedinUrl;
     document.getElementById('x').href = professor.socials.xUrl;
 
@@ -2247,29 +1777,5 @@ document.addEventListener('keydown', (e)=>{
 });
 
   </script>
-  <!-- Contact Modal -->
-<div id="contactModal" class="hidden fixed inset-0 z-[90]">
-  <div class="absolute inset-0 bg-black/60" onclick="closeContact()"></div>
-  <div class="relative mx-auto w-[92%] max-w-lg mt-24 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5 shadow-glow">
-    <div class="flex items-center justify-between pb-2 border-b border-slate-200 dark:border-slate-700">
-      <h3 class="text-lg font-bold">Contact Dr. Golara</h3>
-      <button class="rounded-lg px-2 py-1" onclick="closeContact()">✕</button>
-    </div>
-    <form id="contactForm" class="mt-4 grid gap-3">
-      <input name="name" type="text" placeholder="Your name" required
-             class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"/>
-      <input name="email" type="email" placeholder="Your email" required
-             class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"/>
-      <textarea name="message" rows="5" placeholder="How can we help?" required
-                class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></textarea>
-      <!-- Honeypot (spam trap) -->
-      <input name="company" type="text" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true"/>
-      <button type="submit" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-brand text-white font-semibold hover:bg-brandDark">
-        Send
-      </button>
-      <p class="text-xs text-slate-500">We’ll reply by email.</p>
-    </form>
-  </div>
-</div>
 </body>
 </html>
