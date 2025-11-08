@@ -475,11 +475,25 @@
       email: "sgolara@gsu.edu",
       headshotUrl: "Images/headshot.jpg",
       shortBio: `
-        <p class="mb-4">Sina Golara is an Assistant Professor of Supply Chain Management at the J. Mack Robinson College of Business, Georgia State University. His research lies at the intersection of service and retail operations, with a focus on online platforms, omnichannel strategies, and the evolving role of digital technologies in supply chains. His work has appeared in leading journals such as Production and Operations Management, Information Systems Research, and the Journal of Purchasing and Supply Management.</p>
-        <p class="mb-4">Dr. Golara's research has been recognized with several awards, including the Best Student Paper Award from the Academy of Management's OSCM Division and an FT50 Publication Award from Kennesaw State University's Coles College of Business. He has also served as a finalist for the IBM Best Student Paper Award in the Service Science Division of INFORMS.</p>
-        <p class="mb-4">Prior to joining Georgia State University in 2023, Dr. Golara held academic appointments at Kennesaw State University and a postdoctoral position at the MIT Center for Transportation and Logistics. His industry and consulting experience includes work with Walmart Global eCommerce, Flexe, Inc., and Chemonics Connexi, where he advised on last-mile delivery, shared warehousing, and data analytics strategies.</p>
-        <p>Beyond academia, Dr. Golara frequently provides expert commentary on supply chain and trade issues in major outlets such as The New York Times, Politico, NPR, Fox 5 Atlanta, and the Atlanta Journal-Constitution, where his insights on tariffs, logistics disruptions, and industry transformations have reached broad audiences.</p>
-      `,
+          <p class="mb-4">
+            Sina Golara is an Assistant Professor of Supply Chain Management at the
+            J. Mack Robinson College of Business, Georgia State University. His work sits at
+            the intersection of service and retail operations—online platforms, omnichannel
+            strategy, and the role of digital technologies in supply chains—with publications in
+            <em>Production and Operations Management</em>, <em>Information Systems Research</em>, and the
+            <em>Journal of Purchasing and Supply Management</em>.
+          </p>
+          <p class="mb-4">
+            Prior to GSU, he held appointments at Kennesaw State University and MIT’s Center for
+            Transportation &amp; Logistics, and consulted with Walmart Global eCommerce, Flexe, and
+            Chemonics on last-mile, shared warehousing, and analytics.
+          </p>
+          <p class="mb-0">
+            His research has earned the AOM OSCM Best Student Paper and an FT50 Publication Award.
+            Dr. Golara frequently comments in outlets such as <em>The New York Times</em>, <em>Politico</em>, NPR,
+            Fox&nbsp;5 Atlanta, and the <em>Atlanta Journal-Constitution</em>.
+          </p>
+            `,
       socials: {
                   linkedinUrl: "https://www.linkedin.com/in/sinagolara/",
                   xUrl: "https://x.com/GolaraSina"
@@ -949,7 +963,7 @@ const videoHighlights = [
 ];
 
     // ---------- TEMPLATES ----------
-    const homePage = `
+const homePage = `
 <section class="rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700
                 bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl shadow-glow relative overflow-hidden">
   <div class="grid md:grid-cols-[1.2fr_1fr] gap-10 items-center">
@@ -988,6 +1002,67 @@ const videoHighlights = [
         />
       </div>
     </figure>
+  </div>
+</section>
+
+  <!-- ABOUT SINA -->
+<section id="about"
+  class="mt-12 mx-auto max-w-5xl rounded-2xl p-6 md:p-8
+         border border-slate-200 dark:border-slate-700
+         bg-white/90 dark:bg-slate-900/65 backdrop-blur-xl shadow-glow reveal">
+
+  <div class="grid gap-6 md:gap-8 items-start
+              md:grid-cols-[300px_1fr] lg:grid-cols-[320px_1fr]">
+    <!-- Headshot (fixed, smaller, crisp) -->
+    <figure class="order-1 md:order-none">
+      <div class="relative rounded-2xl overflow-hidden
+                  border border-slate-200 dark:border-slate-700
+                  bg-slate-100 dark:bg-slate-800 ring-1 ring-black/5">
+        <img
+          src="${professor.headshotUrl}"
+          alt="Portrait of Dr. Sina Golara"
+          class="w-full h-auto object-cover aspect-[3/4]"
+          onerror="this.src='https://placehold.co/720x960?text=Dr.+Sina+Golara';this.onerror=null;"
+          loading="lazy" decoding="async"
+        />
+      </div>
+    </figure>
+
+    <!-- Text -->
+    <div>
+      <div class="flex items-baseline justify-between">
+        <h2 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-balance">
+          About Sina
+        </h2>
+        <!-- Minimal CTA on the same baseline -->
+        <a href="https://robinson.gsu.edu/profile/sina-golara/" target="_blank" rel="noreferrer"
+           class="hidden md:inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline underline-offset-4">
+          GSU Academic Profile ↗
+        </a>
+      </div>
+
+      <p class="mt-1 text-[13px] uppercase tracking-[.16em] text-slate-500 dark:text-slate-400">
+        GSU • J. Mack Robinson College of Business
+      </p>
+
+      <!-- Controlled measure + compact rhythm -->
+      <div
+        class="mt-3 max-w-[62ch] text-[15px] leading-[1.65]
+               text-slate-700 dark:text-slate-300
+               [&_p]:mt-3 [&_p]:mb-0 [&_em]:text-slate-900/90 dark:[&_em]:text-white/90">
+        ${professor.shortBio}
+      </div>
+
+      <!-- Mobile CTA (kept chunky only for small screens) -->
+      <div class="mt-4 md:hidden">
+        <a href="https://robinson.gsu.edu/profile/sina-golara/" target="_blank" rel="noreferrer"
+           class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl
+                  bg-gold text-slate-900 font-semibold ring-1 ring-black/5
+                  hover:brightness-95 active:translate-y-[1px] transition">
+          GSU Academic Profile
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1184,80 +1259,81 @@ const teachingPage = `
   <h1 class="text-4xl md:text-5xl font-bold text-center">Automotive Retail Lab</h1>
 
   <!-- Featured Lab Reel (moved directly under H1) -->
-  <section class="mt-8 relative overflow-hidden rounded-3xl p-6 md:p-8 text-white shadow-glow
-                  bg-gradient-to-br from-[#0b1f3a] via-[#163a63] to-[#0d6d7e]">
-    <!-- ambient accents -->
+ <!-- Featured Lab Reel (neutral white container; no gradient background) -->
+<section
+  class="mt-8 relative overflow-hidden rounded-3xl p-6 md:p-8
+         border border-slate-200 dark:border-slate-700
+         bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl
+         text-slate-900 dark:text-slate-100 shadow-glow">
 
-    <div class="relative z-10 grid md:grid-cols-[1.65fr_.35fr] gap-6 items-stretch">
-      <!-- Poster: wider emphasis + richer overlay -->
-      <button
-        type="button"
-        class="group relative rounded-2xl overflow-hidden border border-white/15 bg-black/10"
-        onclick="openVideo(labVideos[0].youtubeUrl, labVideos[0].title)"
-        aria-label="Play ${labVideos[0].title}"
-      >
-        <img
-          src="${labVideos[0].poster}"
-          alt="${labVideos[0].title}"
-          class="w-full h-full object-cover max-md:aspect-video"
-          onerror="this.src='https://placehold.co/1280x720?text=Lab+Reel';this.onerror=null;"
-        />
-        <!-- thicker overlay for drama -->
-        <div class="absolute inset-0 bg-black/45 group-hover:bg-black/35 transition-colors"></div>
+  <div class="relative z-10 grid md:grid-cols-[1.65fr_.35fr] gap-6 items-stretch">
 
-        <!-- play control with pulse -->
-        <div class="absolute inset-0 grid place-items-center">
-          <span class="relative inline-grid place-items-center w-16 h-16 rounded-full bg-gold text-slate-900 shadow-lg ring-1 ring-black/10">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
-              <path d="M8 5v14l11-7z"></path>
-            </svg>
-            <span class="absolute inset-0 rounded-full animate-ping bg-gold/30"></span>
-          </span>
-        </div>
+    <!-- Poster -->
+    <button
+      type="button"
+      class="group relative rounded-2xl overflow-hidden
+             border border-slate-200 dark:border-slate-700
+             bg-slate-100 dark:bg-slate-800"
+      onclick="openVideo(labVideos[0].youtubeUrl, labVideos[0].title)"
+      aria-label="Play ${labVideos[0].title}">
+      <img
+        src="${labVideos[0].poster}"
+        alt="${labVideos[0].title}"
+        class="w-full h-full object-cover max-md:aspect-video"
+        onerror="this.src='https://placehold.co/1280x720?text=Lab+Reel';this.onerror=null;"
+      />
+      <!-- overlay -->
+      <div class="absolute inset-0 bg-black/30 group-hover:bg-black/25 transition-colors"></div>
 
-        <!-- bottom info band (wider-feel overlay) -->
-        <div class="absolute left-0 right-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
-          <div class="text-sm md:text-base font-semibold">Featured: ${labVideos[0].title}</div>
-          <div class="text-xs md:text-sm text-white/85">${labVideos[0].blurb}</div>
-        </div>
-      </button>
+      <!-- play control -->
+      <div class="absolute inset-0 grid place-items-center">
+        <span class="relative inline-grid place-items-center w-16 h-16 rounded-full bg-gold text-slate-900 shadow-md ring-1 ring-black/10">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <span class="absolute inset-0 rounded-full animate-ping bg-gold/30"></span>
+        </span>
+      </div>
 
-      <!-- Slim copy + tiny placeholders (reel-only) -->
-      <div class="rounded-2xl border border-white/15 bg-white/10 backdrop-blur-md p-4 md:p-5">
-        <h3 class="text-lg md:text-xl font-bold">Lab Reel Notes</h3>
-        <p class="mt-1 text-white/85 text-sm leading-relaxed">
-          A quick cut of our industry collaborations: EV traceability pilots, AI assistants for dealerships,
-          and omnichannel analytics at scale.
-        </p>
+      <!-- bottom info band (kept on-image for readability) -->
+      <div class="absolute left-0 right-0 bottom-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent p-4">
+        <div class="text-sm md:text-base font-semibold text-white">Featured: ${labVideos[0].title}</div>
+        <div class="text-xs md:text-sm text-white/85">${labVideos[0].blurb}</div>
+      </div>
+    </button>
 
-        <!-- minimalist placeholders tied to the reel (not clickable) -->
-  <!-- (mini gallery removed by request) -->
-<p class="mt-4 text-white/80 text-xs md:text-sm">
-  Reel highlights: EV traceability pilots · AI assistants for dealerships · Omnichannel analytics at scale.
-</p>
+    <!-- Notes card (neutral) -->
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-700
+                bg-white/80 dark:bg-slate-900/50 backdrop-blur-md
+                p-4 md:p-5">
+      <h3 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">Lab Reel Notes</h3>
+      <p class="mt-1 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+        A quick cut of our industry collaborations: EV traceability pilots, AI assistants for dealerships,
+        and omnichannel analytics at scale.
+      </p>
+      <p class="mt-4 text-slate-600 dark:text-slate-300 text-xs md:text-sm">
+        Reel highlights: EV traceability pilots · AI assistants for dealerships · Omnichannel analytics at scale.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal playback (unchanged) -->
+  <div id="labVideoModal" class="hidden fixed inset-0 z-[80]">
+    <div class="absolute inset-0 bg-black/70" onclick="closeVideo()"></div>
+    <div class="relative mx-auto w-[98%] md:w-[94%] lg:w-[90%] xl:w-[88%] 2xl:w-[85%] mt-10 md:mt-14
+                rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-900">
+      <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
+        <h4 id="labVideoTitle" class="text-white text-sm md:text-base font-semibold">Video</h4>
+        <button class="rounded-lg px-2 py-1 text-white/80 hover:text-white" onclick="closeVideo()" aria-label="Close video">✕</button>
+      </div>
+      <div class="video-wrap">
+        <iframe id="labVideoFrame"
+          src=""
+          title="Lab video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
-
-    <!-- Wider modal for playback -->
-    <div id="labVideoModal" class="hidden fixed inset-0 z-[80]">
-      <div class="absolute inset-0 bg-black/70" onclick="closeVideo()"></div>
-      <div class="relative mx-auto w-[98%] md:w-[94%] lg:w-[90%] xl:w-[88%] 2xl:w-[85%] max-w-none mt-10 md:mt-14
-                  rounded-2xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900">
-        <div class="flex items-center justify-between px-4 py-3 border-b border-white/10">
-          <h4 id="labVideoTitle" class="text-white text-sm md:text-base font-semibold">Video</h4>
-          <button class="rounded-lg px-2 py-1 text-white/80 hover:text-white" onclick="closeVideo()" aria-label="Close video">✕</button>
-        </div>
-        <div class="video-wrap">
-          <iframe id="labVideoFrame"
-            src=""
-            title="Lab video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- Mission & Focus (moved below the Reel) -->
   <section class="mt-10 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow text-center">
@@ -1348,7 +1424,7 @@ const teachingPage = `
     // ---------- RENDERERS ----------
     const main = document.getElementById('main');
 
-    function renderResearch(){
+  function renderResearch(){
   main.innerHTML = researchPage;
 
   const tagFilter = document.getElementById('tag-filter');
@@ -1369,64 +1445,74 @@ const teachingPage = `
     'poms-2021-dealers'
   ]);
 
-  // Card template
-  // ⛔️ DELETE your current `const card = (i) => { ... }`
-// ✅ PASTE this version in its place:
+
+// --- RESEARCH CARD • White variant (image still commented out) ---
 const card = (i) => {
-  const thumb   = i.image || `assets/research/${i.id}.jpg`;
-  const safeAlt = `${i.title} — ${i.venue}`;
   const paperLink =
     (i.links && (i.links.pdfUrl || i.links.publisherUrl || i.links.openUrl)) || "";
 
   return `
-    <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white/75 dark:bg-slate-900/60 backdrop-blur-md shadow-glow transition-transform hover:-translate-y-1">
-      <!-- Journal header -->
-      <div class="bg-amber-100/80 dark:bg-amber-200/15 text-brand dark:text-amber-200 uppercase tracking-[.22em] text-center text-xs font-extrabold py-4 border-b border-amber-300/60">
+    <article
+      class="group rounded-2xl overflow-hidden border border-slate-200
+             bg-white dark:bg-slate-900/60 shadow-glow">
+
+      <!-- Journal band (now white, subtle border) -->
+      <div
+        class="bg-white dark:bg-slate-900/60 text-slate-700 dark:text-white/85
+               uppercase tracking-[.22em] text-center text-xs font-extrabold py-4
+               border-b border-slate-200 dark:border-slate-700">
         ${i.venue}
       </div>
 
-      <!-- Visual -->
+      <!-- IMAGE BLOCK STILL DISABLED (keep for later)
       <figure class="mt-0 mb-0">
         <div class="aspect-[16/10] rounded-lg overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800">
           <img
-            src="${thumb}"
-            alt="${safeAlt}"
+            src="${i.image || `assets/research/${i.id}.jpg`}"
+            alt="${i.title} — ${i.venue}"
             class="w-full h-full object-cover object-center"
             loading="lazy" decoding="async"
             onerror="this.src='https://placehold.co/1200x800?text=Paper+Preview';this.onerror=null;"
           />
         </div>
       </figure>
+      -->
 
-      <!-- Content box: Title → Authors → Abstract -->
-    <div class="mx-3 mt-2 mb-2 rounded-lg border border-amber-300/50 bg-amber-50/85 dark:bg-amber-200/10 p-3 md:p-4 grid gap-3">
-  <h3 class="text-center font-extrabold text-slate-900 text-[16px] md:text-[17px] leading-[1.25]">
-    <span>${i.title}</span>
-    <span class="ml-2 align-middle text-[11px] md:text-[12px] font-semibold text-slate-500/70" aria-label="Publication year">
-      • ${i.year}
-    </span>
-  </h3>
+      <!-- Content panel (white card inside white shell, with subtle border) -->
+      <div class="p-5 md:p-6">
+        <div class="rounded-xl border border-slate-200 dark:border-slate-700
+                    bg-white dark:bg-slate-900/40 px-5 py-6 text-center">
 
-  <div class="text-center italic text-slate-600 dark:text-slate-300 text-[12px] md:text-[13px]">
-    ${i.authors}
-  </div>
+          <h3 class="text-[1.4rem] md:text-[1.55rem] font-extrabold leading-tight text-slate-900 dark:text-white">
+            ${i.title}
+            <span class="ml-2 align-middle text-[11px] md:text-[12px] font-semibold text-slate-500/70">• ${i.year}</span>
+          </h3>
 
-  <p class="text-center text-slate-700 dark:text-slate-300 text-[13.5px] md:text-[14px] leading-[1.45]">
-    ${i.abstract}
-  </p>
+          <div class="mt-2 italic text-slate-600 dark:text-slate-300 text-[13px] md:text-[14px]">
+            ${i.authors}
+          </div>
 
-  ${
-    paperLink
-      ? `<a href="${paperLink}" target="_blank" rel="noopener noreferrer"
-           class="place-self-center inline-flex items-center justify-center px-4 py-2 rounded-md bg-gold text-slate-900 font-extrabold tracking-[.18em] text-[10.5px] hover:brightness-95">
-           REQUEST FULL PAPER
-         </a>`
-      : `<button type="button" aria-disabled="true"
-           class="place-self-center inline-flex items-center justify-center px-4 py-2 rounded-md bg-slate-300 text-slate-700 font-extrabold tracking-[.18em] text-[10.5px] opacity-60 cursor-not-allowed">
-           COMING SOON
-         </button>`
-  }
-</div>
+          <p class="mt-4 text-[15px] leading-relaxed text-slate-700 dark:text-slate-300">
+            ${i.abstract}
+          </p>
+
+          ${
+            paperLink
+              ? `<a href="${paperLink}" target="_blank" rel="noopener noreferrer"
+                    class="mt-6 inline-flex items-center justify-center px-5 py-3 rounded-lg
+                           bg-gold text-slate-900 font-extrabold tracking-[.18em] text-[11px]
+                           hover:brightness-95 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60">
+                   REQUEST FULL PAPER
+                 </a>`
+              : `<button type="button" aria-disabled="true"
+                         class="mt-6 inline-flex items-center justify-center px-5 py-3 rounded-lg
+                                bg-slate-300 text-slate-700 font-extrabold tracking-[.18em] text-[11px]
+                                opacity-60 cursor-not-allowed">
+                   COMING SOON
+                 </button>`
+          }
+        </div>
+      </div>
     </article>
   `;
 };
