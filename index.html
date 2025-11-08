@@ -47,8 +47,8 @@
         }
       }
     }
-  </script>
-<style>
+    </script>
+  <style>
   :root{
     --ring: rgba(17,17,17,.08);
   }
@@ -92,9 +92,7 @@
     }
   }
 
-  /* =====================================================
-     NEWS (grid + cards)
-     ===================================================== */
+  /*  NEWS (grid + cards) */
   .news-grid{ display:grid; gap:1.25rem; }
   @media (min-width:768px){
     .news-grid{
@@ -104,7 +102,7 @@
   }
 
   .news-card{
-    --offset: 0px;               /* first row stays flush */
+    --offset: 0px;              
     display:flex;
     flex-direction:column;
     transform: translateY(var(--offset));
@@ -113,8 +111,8 @@
   }
   @media (min-width:768px){
   .pub-grid > .pub-card{ --offset:0px; }
-  .pub-grid > .pub-card:hover{ transform:translateY(-6px); } /* just a small lift on hover */
-}
+  .pub-grid > .pub-card:hover{ transform:translateY(-6px);
+   } 
 
 .news-card .news-label{
     min-height:24px;
@@ -132,7 +130,7 @@
     width:100%;
     margin:.5rem 0 0;
     border-radius:12px;
-    aspect-ratio:16/9;          /* uniform visual height */
+    aspect-ratio:16/9;
     object-fit:cover;
   }
 
@@ -158,9 +156,9 @@
   }
   .news-card .news-cta:hover{ filter:brightness(.95); }
 
-  /* =====================================================
-     PUBLICATIONS (same system & sizing as News)
-     ===================================================== */
+
+    /* PUBLICATIONS */
+
   .pub-grid{ display:grid; gap:1.25rem; }
   @media (min-width:768px){
     .pub-grid{
@@ -894,7 +892,6 @@ const teaching = {
     summary:
       "Brief feature highlighting Golara’s view on demand signals and retail operations amid macro uncertainty."
   },
-  
 
   {
     outlet: "Al Jazeera",
@@ -1171,8 +1168,6 @@ const homePage = `
     </div>
   </div>
 </section>
-
-
       <section class="mt-16 rounded-3xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-200 dark:border-slate-700 p-8 shadow-glow text-center">
         <h2 class="text-3xl font-bold">Get in Touch</h2>
         <p class="mt-2 text-slate-600 dark:text-slate-400">Connect on social or send a quick note.</p>
@@ -1208,23 +1203,23 @@ const homePage = `
   </section>
 
   <section class="mt-10">
-    <!-- Filters -->
-    <div class="flex flex-wrap gap-4 items-center justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
-  <label class="font-semibold">Tag:</label>
-  <select id="tag-filter" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></select>
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-4 items-center justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+    <label class="font-semibold">Tag:</label>
+    <select id="tag-filter" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900"></select>
 
-  <label class="font-semibold">Sort:</label>
-  <select id="sort-by" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
-    <option value="year_desc">Year (Newest)</option>
-    <option value="year_asc">Year (Oldest)</option>
-  </select>
+    <label class="font-semibold">Sort:</label>
+    <select id="sort-by" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+      <option value="year_desc">Year (Newest)</option>
+      <option value="year_asc">Year (Oldest)</option>
+    </select>
 
-  <label class="font-semibold md:ml-2">View:</label>
-  <select id="view-density" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
-    <option value="comfy" selected>Comfortable</option>
-    <option value="compact">Compact</option>
-  </select>
-</div>
+    <label class="font-semibold md:ml-2">View:</label>
+    <select id="view-density" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+      <option value="comfy" selected>Comfortable</option>
+      <option value="compact">Compact</option>
+    </select>
+  </div>
 
     <!-- FT-50 section -->
     <section class="mt-8 rounded-3xl p-6 md:p-7 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
@@ -1265,35 +1260,34 @@ const teachingPage = `
   </section>
 `;
 
-    const mediaPage = `
-      <h1 class="text-4xl md:text-5xl font-bold text-center">Media</h1>
-      <p class="mt-3 text-center text-slate-600 dark:text-slate-400">Articles, interviews, and features.</p>
+  const mediaPage = `
+    <h1 class="text-4xl md:text-5xl font-bold text-center">Media</h1>
+    <p class="mt-3 text-center text-slate-600 dark:text-slate-400">Articles, interviews, and features.</p>
 
-      <div class="mt-8 flex flex-wrap gap-4 justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
-        <label class="font-semibold">Type:</label>
-        <select id="media-type-filter" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
-          <option value="all">All</option><option>Article</option><option>Interview</option><option>Video</option><option>Podcast</option>
-        </select>
-        <label class="font-semibold">Sort:</label>
-        <select id="media-sort-by" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
-          <option value="date_desc">Newest</option><option value="date_asc">Oldest</option>
-        </select>
-      </div>
+    <div class="mt-8 flex flex-wrap gap-4 justify-center rounded-2xl p-4 border border-slate-200 dark:border-slate-700 bg-white/70 dark:bg-slate-900/50 backdrop-blur-md shadow-glow">
+      <label class="font-semibold">Type:</label>
+      <select id="media-type-filter" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+        <option value="all">All</option><option>Article</option><option>Interview</option><option>Video</option><option>Podcast</option>
+      </select>
+      <label class="font-semibold">Sort:</label>
+      <select id="media-sort-by" class="px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900">
+        <option value="date_desc">Newest</option><option value="date_asc">Oldest</option>
+      </select>
+    </div>
 
-      <div id="media-list" class="mt-8 grid md:grid-cols-2 gap-6"></div>
-    `;
-    const labPage = `
+    <div id="media-list" class="mt-8 grid md:grid-cols-2 gap-6"></div>
+  `;
+  const labPage = `
   <h1 class="text-4xl md:text-5xl font-bold text-center">Automotive Retail Lab</h1>
 
   <!-- Featured Lab Reel (moved directly under H1) -->
- <!-- Featured Lab Reel (neutral white container; no gradient background) -->
-<section
-  class="mt-8 relative overflow-hidden rounded-3xl p-6 md:p-8
-         border border-slate-200 dark:border-slate-700
-         bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl
-         text-slate-900 dark:text-slate-100 shadow-glow">
+  <section
+    class="mt-8 relative overflow-hidden rounded-3xl p-6 md:p-8
+          border border-slate-200 dark:border-slate-700
+          bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl
+          text-slate-900 dark:text-slate-100 shadow-glow">
 
-  <div class="relative z-10 grid md:grid-cols-[1.65fr_.35fr] gap-6 items-stretch">
+    <div class="relative z-10 grid md:grid-cols-[1.65fr_.35fr] gap-6 items-stretch">
 
     <!-- Poster -->
     <button
@@ -1446,7 +1440,6 @@ const teachingPage = `
       "poms-2024-inventory-variety",
       "poms-2021-dealers"
     ]);
-
 
     // ---------- RENDERERS ----------
     const main = document.getElementById('main');
@@ -1601,15 +1594,15 @@ function renderTeaching(){
   };
 
   const courseRow = (c) => `
-  <li class="px-3.5 py-3 md:px-4 md:py-3.5 flex items-center justify-between gap-3">
-    <h3 class="text-[1.05rem] md:text-[1.1rem] font-extrabold text-slate-900 leading-tight">
-      ${c.code}: ${c.title}
-    </h3>
-    <span class="shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11.5px] font-semibold">
-      ${c.years}
-    </span>
-  </li>
-`;
+    <li class="px-3.5 py-3 md:px-4 md:py-3.5 flex items-center justify-between gap-3">
+      <h3 class="text-[1.05rem] md:text-[1.1rem] font-extrabold text-slate-900 leading-tight">
+        ${c.code}: ${c.title}
+      </h3>
+      <span class="shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-[11.5px] font-semibold">
+        ${c.years}
+      </span>
+    </li>
+  `;
 
   // WHITE header; no yellow; no separators between rows
   const instCard = (inst, courses) => `
