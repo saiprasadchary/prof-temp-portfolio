@@ -1005,37 +1005,38 @@ const homePage = `
   </div>
 </section>
 
-  <!-- ABOUT SINA -->
+<!-- ABOUT SINA (aligned with hero & highlights) -->
 <section id="about"
-  class="mt-12 mx-auto max-w-5xl rounded-2xl p-6 md:p-8
+  class="mt-12 rounded-3xl p-8 md:p-10
          border border-slate-200 dark:border-slate-700
-         bg-white/90 dark:bg-slate-900/65 backdrop-blur-xl shadow-glow reveal">
+         bg-white/80 dark:bg-slate-900/60 backdrop-blur-xl shadow-glow reveal">
 
-  <div class="grid gap-6 md:gap-8 items-start
-              md:grid-cols-[300px_1fr] lg:grid-cols-[320px_1fr]">
-    <!-- Headshot (fixed, smaller, crisp) -->
+  <div class="grid items-start gap-6 md:gap-8
+              md:grid-cols-[280px_1fr] lg:grid-cols-[300px_1fr]">
+    <!-- Portrait (capped height to keep card compact) -->
     <figure class="order-1 md:order-none">
       <div class="relative rounded-2xl overflow-hidden
                   border border-slate-200 dark:border-slate-700
-                  bg-slate-100 dark:bg-slate-800 ring-1 ring-black/5">
+                  bg-slate-100 dark:bg-slate-800">
         <img
           src="${professor.headshotUrl}"
           alt="Portrait of Dr. Sina Golara"
-          class="w-full h-auto object-cover aspect-[3/4]"
+          class="w-full h-full object-cover aspect-[3/4]
+                 md:max-h-[360px] lg:max-h-[380px]"
           onerror="this.src='https://placehold.co/720x960?text=Dr.+Sina+Golara';this.onerror=null;"
           loading="lazy" decoding="async"
         />
       </div>
     </figure>
 
-    <!-- Text -->
+    <!-- Copy -->
     <div>
       <div class="flex items-baseline justify-between">
         <h2 class="text-3xl md:text-4xl font-bold leading-tight tracking-tight text-balance">
           About Sina
         </h2>
-        <!-- Minimal CTA on the same baseline -->
-        <a href="https://robinson.gsu.edu/profile/sina-golara/" target="_blank" rel="noreferrer"
+        <a href="https://robinson.gsu.edu/profile/sina-golara/"
+           target="_blank" rel="noreferrer"
            class="hidden md:inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline underline-offset-4">
           GSU Academic Profile ↗
         </a>
@@ -1045,7 +1046,7 @@ const homePage = `
         GSU • J. Mack Robinson College of Business
       </p>
 
-      <!-- Controlled measure + compact rhythm -->
+      <!-- Controlled measure for readability -->
       <div
         class="mt-3 max-w-[62ch] text-[15px] leading-[1.65]
                text-slate-700 dark:text-slate-300
@@ -1053,7 +1054,7 @@ const homePage = `
         ${professor.shortBio}
       </div>
 
-      <!-- Mobile CTA (kept chunky only for small screens) -->
+      <!-- Mobile CTA -->
       <div class="mt-4 md:hidden">
         <a href="https://robinson.gsu.edu/profile/sina-golara/" target="_blank" rel="noreferrer"
            class="inline-flex items-center justify-center px-4 py-2.5 rounded-xl
