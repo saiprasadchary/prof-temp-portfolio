@@ -331,7 +331,7 @@
 }
 
 /* Justified paragraph helper */
-.text-just { text-align: justify; text-justify: inter-word; }
+.text-just { text-align: justify; text-justify: inter-word;  hyphens: auto;}
   
 </style>
 <script type="application/ld+json">
@@ -1049,6 +1049,7 @@ const homePage = `
     </figure>
 
  <!-- Copy -->
+<div>
 <!-- Copy -->
 <div class="reveal grid md:grid-cols-[1fr_auto] gap-x-4">
   <!-- Row 1 -->
@@ -1067,19 +1068,18 @@ const homePage = `
   </p>
 
   <!-- Row 3 (spans both columns) -->
-  <div id="bioText"
-       class="col-span-1 md:col-span-2 mt-3 text-[15px] leading-[1.7]
-              text-slate-700 dark:text-slate-300 text-just
-              [&_p]:mt-3 [&_p]:mb-0 [&_em]:text-slate-900/90 dark:[&_em]:text-white/90">
-    ${professor.shortBioCondensed}
-  </div>
+<div id="bioText" role="region" aria-live="polite"
+     class="col-span-1 md:col-span-2 mt-3 text-[15px] leading-[1.7]
+            text-slate-700 dark:text-slate-300 text-just
+            [&_p]:mt-3 [&_p]:mb-0 [&_em]:text-slate-900/90 dark:[&_em]:text-white/90">
+  ${professor.shortBioCondensed}
+</div>
 
-  <!-- Row 4 (spans both columns) -->
-  <button id="bioToggle"
-          class="col-span-1 md:col-span-2 mt-3 inline-flex items-center gap-1
-                 text-sm font-semibold text-brand hover:underline underline-offset-4">
-    Read full bio
-  </button>
+<button id="bioToggle" aria-controls="bioText" aria-expanded="false"
+        class="col-span-1 md:col-span-2 mt-3 inline-flex items-center gap-1
+               text-sm font-semibold text-brand hover:underline underline-offset-4">
+  Read full bio
+</button>
 
   <!-- Mobile CTA stays separate -->
   <div class="mt-4 md:hidden col-span-1">
@@ -1091,7 +1091,6 @@ const homePage = `
     </a>
   </div>
 </div>
-  </div>
 </section>
 
 <!-- HIGHLIGHTS (neutral, no gradients) -->
@@ -1553,7 +1552,7 @@ function draw(){
   let list = researchItems.slice();
   if(tag !== 'all') list = list.filter(i => i.tags.includes(tag));
   list.sort((a,b) => sort === 'year_asc' ? a.year - b.year : b.year - a.year);
-  teaching
+  
   // density-aware grids
   if(view === 'compact'){
     ftGrid.className    = "mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6";
@@ -1801,17 +1800,17 @@ const card = (m) => `
       const r = routes[path] || routes['404'];
       if(r.template) main.innerHTML = r.template; else if(r.render) r.render();
       (function wireBioToggle(){
-      const el  = document.getElementById('bioText');
-      const btn = document.getElementById('bioToggle');
-      if(!el || !btn) return;
-
-      let expanded = false;
-      btn.addEventListener('click', () => {
-        expanded = !expanded;
-        el.innerHTML = expanded ? professor.shortBio : professor.shortBioCondensed;
-        btn.textContent = expanded ? 'Show less' : 'Read full bio';
-      });
-    })();
+        const el  = document.getElementById('bioText');
+        const btn = document.getElementById('bioToggle');
+        if(!el || !btn) return;
+        let expanded = false;
+        btn.addEventListener('click', () => {
+          expanded = !expanded;
+          el.innerHTML = expanded ? professor.shortBio : professor.shortBioCondensed;
+          btn.textContent = expanded ? 'Show less' : 'Read full bio';
+          btn.setAttribute('aria-expanded', String(expanded));
+        });
+      })();
       document.title = r.title;
 
       // active nav
